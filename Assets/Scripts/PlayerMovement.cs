@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    private PlayerCombat combat;
+
     [Header("Movement Settings")]
     public float moveSpeed = 5f;
     public float jumpForce = 10f;
@@ -16,9 +18,9 @@ public class PlayerMovement : MonoBehaviour
     public float groundCheckRadius = 0.2f;
     public LayerMask groundLayer;
 
-    private Rigidbody2D rb;
+    public Rigidbody2D rb;
     private float moveInput;
-    private bool isGrounded;
+    public bool isGrounded;
 
     [Header("Crouch Settings")]
     public bool isCrouching;
@@ -52,6 +54,11 @@ public class PlayerMovement : MonoBehaviour
     [Header("Combat State")]
     public bool isInvulnerable;
 
+    [Header("Ground Slam State")]
+    public bool isGroundSlamming = false; // currently slamming
+    public float groundSlamSpeed = 25f;   // vertical fall speed during slam
+    public bool canGroundSlam;
+
     [Header("Look Direction")]
     public int lookHorizontal;
     public int lookVertical;
@@ -59,11 +66,16 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-
         capsule = GetComponent<CapsuleCollider2D>();
 
         originalColliderSize = capsule.size;
         originalColliderOffset = capsule.offset;
+
+        // Add this line:
+        combat = GetComponent<PlayerCombat>();
+
+        if (combat == null)
+            Debug.LogError("PlayerCombat component not found on this GameObject!");
     }
 
     private void Update()
@@ -83,11 +95,17 @@ public class PlayerMovement : MonoBehaviour
             return;
 
         float speed = moveSpeed;
-
         if (isCrouching)
             speed *= crouchSpeedMultiplyer;
 
+        // Normal left/right movement
         rb.linearVelocity = new Vector2(moveInput * speed, rb.linearVelocity.y);
+
+        // Apply ground slam downward force
+        if (isGroundSlamming)
+        {
+            rb.linearVelocity = new Vector2(0, -groundSlamSpeed); // pull straight down
+        }
     }
 
     void HandleMovementInput()
@@ -185,6 +203,15 @@ public class PlayerMovement : MonoBehaviour
         {
             canDoubleJump = true;
             hasAirDashed = false;
+            canGroundSlam = true;
+
+            // If player was ground slamming, spawn indicators
+            if (isGroundSlamming)
+            {
+                combat.SpawnGroundSlamIndicators();
+                isGroundSlamming = false;
+            }
+
             Debug.Log("Player is grounded");
         }
         else

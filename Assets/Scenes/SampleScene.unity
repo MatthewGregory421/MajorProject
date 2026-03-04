@@ -400,6 +400,7 @@ GameObject:
   - component: {fileID: 113152998}
   - component: {fileID: 113152997}
   - component: {fileID: 113152999}
+  - component: {fileID: 113153000}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -565,6 +566,8 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
+  rb: {fileID: 113152997}
+  isGrounded: 0
   isCrouching: 0
   crouchSpeedMultiplyer: 0.6
   capsule: {fileID: 113152998}
@@ -579,7 +582,28 @@ MonoBehaviour:
   dashDuration: 0.8
   dashCooldown: 1.5
   isInvulnerable: 0
-  currentLookDirection: 0
+  isGroundSlamming: 0
+  groundSlamSpeed: 25
+  canGroundSlam: 0
+  lookHorizontal: 0
+  lookVertical: 0
+--- !u!114 &113153000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113152994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af85c062d152ddd4c88ef755e048b918, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackCooldown: 0.3
+  attackPrefab: {fileID: 1816806945556153040, guid: b61a767816ceba94d803b37d50eb1617, type: 3}
+  attackDistance: 1
+  groundSlamCount: 4
+  groundSlamSpacing: 0.5
 --- !u!1 &132950712
 GameObject:
   m_ObjectHideFlags: 0
