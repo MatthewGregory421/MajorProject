@@ -24,6 +24,18 @@ public class PlayerMovement : MonoBehaviour
     public bool isCrouching;
     public float crouchSpeedMultiplyer = 0.6f;
 
+    [Header("Crouch Collider Settings")]
+    public CapsuleCollider2D capsule;
+
+    private Vector2 originalColliderSize;
+    private Vector2 originalColliderOffset;
+
+    public float crouchHeightMultiplier = 0.5f;
+
+    public LayerMask ceilingLayer;
+    public Transform ceilingCheck;
+    public float ceilingCheckRadius = 0.2f;
+
     [Header("Dash Settings")]
     public bool dashEnabled = true;
     public float dashForce = 18f;
@@ -40,21 +52,18 @@ public class PlayerMovement : MonoBehaviour
     [Header("Combat State")]
     public bool isInvulnerable;
 
-    // the direction the player is looking
-    public enum LookDirection
-    {
-        Left,
-        Right,
-        Up,
-        Down
-    }
-
-    public LookDirection currentLookDirection;
+    [Header("Look Direction")]
+    public int lookHorizontal;
+    public int lookVertical;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        currentLookDirection = LookDirection.Right;
+
+        capsule = GetComponent<CapsuleCollider2D>();
+
+        originalColliderSize = capsule.size;
+        originalColliderOffset = capsule.offset;
     }
 
     private void Update()
@@ -88,28 +97,55 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             moveInput = -1f;
-            currentLookDirection = LookDirection.Left;
         }
         else if (Input.GetKey(KeyCode.RightArrow))
         {
             moveInput = 1f;
-            currentLookDirection = LookDirection.Right;
         }
     }
 
     void HandleLookDirection()
     {
-        // Crouch
-        isCrouching = Input.GetKey(KeyCode.DownArrow);
+        if (isDashing)
+            return;
 
-        if (Input.GetKeyDown(KeyCode.UpArrow))
-            currentLookDirection = LookDirection.Up;
 
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
-            currentLookDirection = LookDirection.Left;
+        lookHorizontal = 0;
+        lookVertical = 0;
 
-        if (Input.GetKeyDown(KeyCode.RightArrow))
-            currentLookDirection = LookDirection.Right;
+
+        bool left = Input.GetKey(KeyCode.LeftArrow);
+        bool right = Input.GetKey(KeyCode.RightArrow);
+
+        if (left && !right)
+            lookHorizontal = -1;
+        else if (right && !left)
+            lookHorizontal = 1;
+
+
+        bool up = Input.GetKey(KeyCode.UpArrow);
+        bool down = Input.GetKey(KeyCode.DownArrow);
+
+        if (up && !down)
+            lookVertical = 1;
+        else if (down && !up)
+            lookVertical = -1;
+
+
+        bool crouchPressed = Input.GetKey(KeyCode.C);
+
+        if (crouchPressed && isGrounded)
+        {
+            if (!isCrouching)
+                EnterCrouch();
+
+            isCrouching = true;
+        }
+        else
+        {
+            if (isCrouching && !IsCeilingAbove())
+                ExitCrouch();
+        }
     }
 
     void HandleJump()
@@ -140,6 +176,11 @@ public class PlayerMovement : MonoBehaviour
             groundLayer
         );
 
+        if (!isGrounded && isCrouching)
+        {
+            ExitCrouch();
+        }
+
         if (isGrounded)
         {
             canDoubleJump = true;
@@ -152,16 +193,48 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    void EnterCrouch()
+    {
+        capsule.size = new Vector2(
+            originalColliderSize.x,
+            originalColliderSize.y * crouchHeightMultiplier
+        );
+
+        capsule.offset = new Vector2(
+            originalColliderOffset.x,
+            originalColliderOffset.y - (originalColliderSize.y * (1 - crouchHeightMultiplier) / 2f)
+        );
+    }
+
+    void ExitCrouch()
+    {
+        capsule.size = originalColliderSize;
+        capsule.offset = originalColliderOffset;
+        isCrouching = false;
+    }
+
+    bool IsCeilingAbove()
+    {
+        return Physics2D.OverlapCircle(
+            ceilingCheck.position,
+            ceilingCheckRadius,
+            ceilingLayer
+        );
+    }
+
     void HandleDash()
     {
-        if (!dashEnabled || isCrouching)
+        if (!dashEnabled)
             return;
 
         if (dashCooldown > 0)
             dashCooldownTimer -= Time.deltaTime;
 
-        if (Input.GetKeyDown(KeyCode.A) && dashCooldownTimer <= 0 && !isDashing)
+        if (Input.GetKeyDown(KeyCode.A) && dashCooldownTimer <= 0 && !isDashing && !isCrouching)
         {
+            if (lookHorizontal == 0)
+                return;
+
             if (isGrounded)
             {
                 StartDash();
@@ -193,10 +266,7 @@ public class PlayerMovement : MonoBehaviour
         dashTimer = dashDuration;
         dashCooldownTimer = dashCooldown;
 
-        if (currentLookDirection == LookDirection.Left)
-            dashDirection = -1f;
-        else
-            dashDirection = 1f;
+        dashDirection = lookHorizontal;
 
         rb.gravityScale = 0f; // optional freeze gravity
     }
