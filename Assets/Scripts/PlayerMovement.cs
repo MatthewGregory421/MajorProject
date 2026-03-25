@@ -4,6 +4,9 @@ public class PlayerMovement : MonoBehaviour
 {
     private PlayerCombat combat;
 
+    [SerializeField] private LayerMask enemyLayer;
+    [SerializeField] private LayerMask obsticleLayer;
+
     [Header("Movement Settings")]
     public float moveSpeed = 5f;
     public float jumpForce = 10f;
@@ -99,12 +102,31 @@ public class PlayerMovement : MonoBehaviour
             speed *= crouchSpeedMultiplyer;
 
         // Normal left/right movement
-        rb.linearVelocity = new Vector2(moveInput * speed, rb.linearVelocity.y);
+        Vector2 velocity = rb.linearVelocity;
+
+        // Check for wall in movement direction
+        RaycastHit2D wallHit = Physics2D.Raycast(
+            transform.position,
+            new Vector2(moveInput, 0),
+            0.6f,
+            obsticleLayer
+        );
+
+        if (wallHit && moveInput != 0)
+        {
+            velocity.x = 0; // stop sticking
+        }
+        else
+        {
+            velocity.x = moveInput * speed;
+        }
+
+        rb.linearVelocity = velocity;
 
         // Apply ground slam downward force
         if (isGroundSlamming)
         {
-            rb.linearVelocity = new Vector2(0, -groundSlamSpeed); // pull straight down
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, -groundSlamSpeed); // pull straight down
         }
     }
 
@@ -186,6 +208,19 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    public void SetEnemyCollision(bool enabled)
+    {
+        int playerLayer = gameObject.layer;
+
+        for (int i = 0; i < 32; i++)
+        {
+            if ((enemyLayer.value & (1 << i)) != 0)
+            {
+                Physics2D.IgnoreLayerCollision(playerLayer, i, !enabled);
+            }
+        }
+    }
+
     void CheckGrounded()
     {
         isGrounded = Physics2D.OverlapCircle(
@@ -210,6 +245,8 @@ public class PlayerMovement : MonoBehaviour
             {
                 combat.SpawnGroundSlamIndicators();
                 isGroundSlamming = false;
+
+                SetEnemyCollision(true);
             }
 
             Debug.Log("Player is grounded");

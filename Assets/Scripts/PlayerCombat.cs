@@ -61,6 +61,7 @@ public class PlayerCombat : MonoBehaviour
 
             movement.isGroundSlamming = true;
             movement.rb.linearVelocity = Vector2.zero;
+            movement.SetEnemyCollision(false); // PHASE THROUGH ENEMIES
             attackTimer = attackCooldown;
             return;
         }
@@ -120,7 +121,7 @@ public class PlayerCombat : MonoBehaviour
 
                 Vector2 knockDir = ((Vector2)(enemy.transform.position - transform.position)).normalized;
 
-                enemy.TakeDamage(1, knockDir, normalHorizontalForce, normalVerticalForce);
+                //enemy.TakeDamage(1, knockDir, normalHorizontalForce, normalVerticalForce);
             }
         }
 
@@ -151,6 +152,21 @@ public class PlayerCombat : MonoBehaviour
     {
         Debug.Log("Ground Slam Impact!");
 
+        Collider2D[] centerHits = Physics2D.OverlapCircleAll(transform.position, 0.6f);
+
+        foreach (Collider2D hit in centerHits)
+        {
+            BaseEnemy enemy = hit.GetComponent<BaseEnemy>();
+            if (enemy != null && !enemiesHit.Contains(enemy))
+            {
+                enemiesHit.Add(enemy);
+
+                Vector2 dir = Vector2.down;
+
+                //enemy.TakeDamage(1, dir, slamHorizontalForce, slamVerticalForce);
+            }
+        }
+
         for (int i = 1; i <= groundSlamCount; i++)
         {
             float offset = i * groundSlamSpacing;
@@ -172,7 +188,7 @@ public class PlayerCombat : MonoBehaviour
 
                     Vector2 dir = ((Vector2)(enemy.transform.position - transform.position)).normalized;
 
-                    enemy.TakeDamage(1, dir, slamHorizontalForce, slamVerticalForce);
+                    //enemy.TakeDamage(1, dir, slamHorizontalForce, slamVerticalForce);
                 }
             }
 
@@ -193,7 +209,7 @@ public class PlayerCombat : MonoBehaviour
 
                     Vector2 dir = ((Vector2)(enemy.transform.position - transform.position)).normalized;
 
-                    enemy.TakeDamage(1, dir, slamHorizontalForce, slamVerticalForce);
+                    //enemy.TakeDamage(1, dir, slamHorizontalForce, slamVerticalForce);
                 }
             }
         }
