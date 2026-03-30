@@ -10,12 +10,12 @@ public class PlayerCombat : MonoBehaviour
     private float attackTimer;
 
     [Header("Debug Attack Prefab")]
-    public GameObject attackPrefab; // assign AttackIndicator prefab in inspector
-    public float attackDistance = 1f; // how far in front of player it spawns
+    public GameObject attackPrefab;
+    public float attackDistance = 1f;
 
     [Header("Ground Slam Settings")]
-    public int groundSlamCount = 4;         // number of indicators per side
-    public float groundSlamSpacing = 0.5f;     // reset when grounded
+    public int groundSlamCount = 4;
+    public float groundSlamSpacing = 0.5f;
 
     [Header("Knockback Settings")]
     public float normalHorizontalForce = 6f;
@@ -26,8 +26,6 @@ public class PlayerCombat : MonoBehaviour
 
     private HashSet<BaseEnemy> enemiesHit = new HashSet<BaseEnemy>();
 
-
-    // Tracks last horizontal direction (1 = right, -1 = left)
     private int lastHorizontal = 1;
 
     void Start()
@@ -41,7 +39,6 @@ public class PlayerCombat : MonoBehaviour
         HandleAttack();
     }
 
-    // Update the last horizontal direction from player input
     void UpdateLastHorizontal()
     {
         if (movement.lookHorizontal != 0)
@@ -57,19 +54,17 @@ public class PlayerCombat : MonoBehaviour
 
         if (!movement.isGrounded && ver < 0 && Input.GetKeyDown(KeyCode.D) && !movement.isGroundSlamming)
         {
-            enemiesHit.Clear(); // reset hits for slam
-
+            enemiesHit.Clear();
             movement.isGroundSlamming = true;
             movement.rb.linearVelocity = Vector2.zero;
-            movement.SetEnemyCollision(false); // PHASE THROUGH ENEMIES
+            movement.SetEnemyCollision(false);
             attackTimer = attackCooldown;
             return;
         }
 
         if (Input.GetKeyDown(KeyCode.D) && attackTimer <= 0)
         {
-            enemiesHit.Clear(); // reset hits for this attack
-
+            enemiesHit.Clear();
             PerformAttack();
             attackTimer = attackCooldown;
         }
@@ -82,21 +77,11 @@ public class PlayerCombat : MonoBehaviour
 
         string attackDirection = "Neutral";
 
-        if (ver > 0)
-            attackDirection = "Up";
-        else if (ver < 0)
-            attackDirection = "Down";
-        else if (hor != 0)
-        {
-            attackDirection = hor < 0 ? "Left" : "Right";
-            lastHorizontal = hor;
-        }
-        else
-        {
-            attackDirection = lastHorizontal < 0 ? "Left" : "Right";
-        }
+        if (ver > 0) attackDirection = "Up";
+        else if (ver < 0) attackDirection = "Down";
+        else if (hor != 0) attackDirection = hor < 0 ? "Left" : "Right";
+        else attackDirection = lastHorizontal < 0 ? "Left" : "Right";
 
-        // Direction vector
         Vector2 dir = Vector2.zero;
         if (attackDirection == "Left") dir = Vector2.left;
         else if (attackDirection == "Right") dir = Vector2.right;
@@ -104,14 +89,11 @@ public class PlayerCombat : MonoBehaviour
         else if (attackDirection == "Down") dir = Vector2.down;
 
         Vector3 spawnPos = transform.position + (Vector3)(dir * attackDistance);
-
-        // Spawn debug visual
         GameObject indicator = Instantiate(attackPrefab, spawnPos, Quaternion.identity);
         Destroy(indicator, 0.5f);
 
         // Damage check
         Collider2D[] hits = Physics2D.OverlapCircleAll(spawnPos, 0.5f);
-
         foreach (Collider2D hit in hits)
         {
             BaseEnemy enemy = hit.GetComponent<BaseEnemy>();
@@ -120,28 +102,25 @@ public class PlayerCombat : MonoBehaviour
                 enemiesHit.Add(enemy);
 
                 Vector2 knockDir = ((Vector2)(enemy.transform.position - transform.position)).normalized;
-
-                //enemy.TakeDamage(1, knockDir, normalHorizontalForce, normalVerticalForce);
+                enemy.TakeDamage(1, knockDir); // <-- APPLY DAMAGE + KNOCKBACK + FLASH
             }
         }
 
         Debug.Log("Attack Direction: " + attackDirection);
     }
+
     void GroundSlam()
     {
         Debug.Log("Ground Slam!");
 
-        // Spawn multiple indicators on left and right
         for (int i = 1; i <= groundSlamCount; i++)
         {
             float offset = i * groundSlamSpacing;
 
-            // Left side
             Vector3 leftPos = transform.position + Vector3.left * offset;
             GameObject leftIndicator = Instantiate(attackPrefab, leftPos, Quaternion.identity);
             Destroy(leftIndicator, 0.5f);
 
-            // Right side
             Vector3 rightPos = transform.position + Vector3.right * offset;
             GameObject rightIndicator = Instantiate(attackPrefab, rightPos, Quaternion.identity);
             Destroy(rightIndicator, 0.5f);
@@ -153,17 +132,14 @@ public class PlayerCombat : MonoBehaviour
         Debug.Log("Ground Slam Impact!");
 
         Collider2D[] centerHits = Physics2D.OverlapCircleAll(transform.position, 0.6f);
-
         foreach (Collider2D hit in centerHits)
         {
             BaseEnemy enemy = hit.GetComponent<BaseEnemy>();
             if (enemy != null && !enemiesHit.Contains(enemy))
             {
                 enemiesHit.Add(enemy);
-
                 Vector2 dir = Vector2.down;
-
-                //enemy.TakeDamage(1, dir, slamHorizontalForce, slamVerticalForce);
+                enemy.TakeDamage(1, dir); // <-- slam damage + knockback
             }
         }
 
@@ -171,13 +147,8 @@ public class PlayerCombat : MonoBehaviour
         {
             float offset = i * groundSlamSpacing;
 
-            // LEFT SIDE
+            // LEFT
             Vector3 leftPos = transform.position + Vector3.left * offset;
-
-            GameObject leftIndicator = Instantiate(attackPrefab, leftPos, Quaternion.identity);
-            Destroy(leftIndicator, 0.5f);
-
-            // DAMAGE CHECK (LEFT)
             Collider2D[] leftHits = Physics2D.OverlapCircleAll(leftPos, 0.5f);
             foreach (Collider2D hit in leftHits)
             {
@@ -185,20 +156,13 @@ public class PlayerCombat : MonoBehaviour
                 if (enemy != null && !enemiesHit.Contains(enemy))
                 {
                     enemiesHit.Add(enemy);
-
                     Vector2 dir = ((Vector2)(enemy.transform.position - transform.position)).normalized;
-
-                    //enemy.TakeDamage(1, dir, slamHorizontalForce, slamVerticalForce);
+                    enemy.TakeDamage(1, dir);
                 }
             }
 
-            // RIGHT SIDE
+            // RIGHT
             Vector3 rightPos = transform.position + Vector3.right * offset;
-
-            GameObject rightIndicator = Instantiate(attackPrefab, rightPos, Quaternion.identity);
-            Destroy(rightIndicator, 0.5f);
-
-            // DAMAGE CHECK (RIGHT)
             Collider2D[] rightHits = Physics2D.OverlapCircleAll(rightPos, 0.5f);
             foreach (Collider2D hit in rightHits)
             {
@@ -206,10 +170,8 @@ public class PlayerCombat : MonoBehaviour
                 if (enemy != null && !enemiesHit.Contains(enemy))
                 {
                     enemiesHit.Add(enemy);
-
                     Vector2 dir = ((Vector2)(enemy.transform.position - transform.position)).normalized;
-
-                    //enemy.TakeDamage(1, dir, slamHorizontalForce, slamVerticalForce);
+                    enemy.TakeDamage(1, dir);
                 }
             }
         }
