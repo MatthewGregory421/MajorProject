@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
 {
-    public BaseEnemy baseEnemy;
+    private BaseEnemy baseEnemy;
+    private EnemyAttack attack;
 
     [Header("Detection")]
     public float detectionRange = 6f;
@@ -20,39 +21,51 @@ public class EnemyAI : MonoBehaviour
     public LayerMask groundLayer;
     public LayerMask obstacleLayer;
 
-    [Header("Anti-Jitter Vertical Control")]
+    [Header("Vertical Control")]
     public float verticalIgnoreThreshold = 1.0f;
 
-    [Header("Crowd Control")]
-    public float separationRadius = 0.6f;
-    public float separationStrength = 2f;
-    public LayerMask enemyLayer;
-
-    private enum State { Roam, Chase }
+    private enum State { Roam, Chase, Attack }
     private State state;
+
+    [SerializeField] private string debugState;
 
     void Awake()
     {
         baseEnemy = GetComponent<BaseEnemy>();
+        attack = GetComponent<EnemyAttack>();
 
         if (baseEnemy == null)
             Debug.LogError("EnemyAI: BaseEnemy missing!");
+
+        if (attack == null)
+            Debug.LogWarning("EnemyAI: No EnemyAttack attached");
     }
 
     void Update()
     {
+        debugState = state.ToString();
+
         if (baseEnemy == null || baseEnemy.player == null)
             return;
 
-        float distToPlayer = Vector2.Distance(transform.position, baseEnemy.player.position);
-
+        float dist = Vector2.Distance(transform.position, baseEnemy.player.position);
         float verticalDiff = baseEnemy.player.position.y - transform.position.y;
 
         // =========================
-        // STATE
+        // STATE LOGIC
         // =========================
-        state = (distToPlayer <= detectionRange) ? State.Chase : State.Roam;
+        float attackRange = attack != null ? attack.GetAttackRange() : preferredDistance;
 
+        if (dist > detectionRange)
+            state = State.Roam;
+        else if (dist > attackRange)
+            state = State.Chase;
+        else
+            state = State.Attack;
+
+        // =========================
+        // EXECUTE STATE
+        // =========================
         switch (state)
         {
             case State.Roam:
@@ -60,22 +73,25 @@ public class EnemyAI : MonoBehaviour
                 break;
 
             case State.Chase:
-                Chase(distToPlayer, verticalDiff);
+                Chase(verticalDiff);
+                break;
+
+            case State.Attack:
+                Attack(verticalDiff);
                 break;
         }
     }
 
     // =========================
-    // ROAM (SMART VERSION)
+    // ROAM
     // =========================
     void Roam(float verticalDiff)
     {
         float dir = transform.localScale.x >= 0 ? 1f : -1f;
 
-        // KEY FIX: if player is above, freeze horizontal AI influence
         if (verticalDiff > verticalIgnoreThreshold)
         {
-            baseEnemy.SetVelocity(new Vector2(0f, baseEnemy.rb.linearVelocity.y));
+            baseEnemy.StopHorizontal();
             return;
         }
 
@@ -85,7 +101,7 @@ public class EnemyAI : MonoBehaviour
             wallCheck.position,
             moveDir,
             wallCheckDistance,
-            obstacleLayer
+            obstacleLayer | groundLayer
         );
 
         RaycastHit2D groundHit = Physics2D.Raycast(
@@ -107,29 +123,70 @@ public class EnemyAI : MonoBehaviour
     // =========================
     // CHASE
     // =========================
-    void Chase(float dist, float verticalDiff)
+    void Chase(float verticalDiff)
     {
         float dir = (baseEnemy.player.position.x > transform.position.x) ? 1f : -1f;
 
-        // KEY FIX: prevent jitter when player is above
+        FacePlayer(dir);
+
         if (verticalDiff > verticalIgnoreThreshold)
         {
-            baseEnemy.SetVelocity(new Vector2(0f, baseEnemy.rb.linearVelocity.y));
+            baseEnemy.StopHorizontal();
             return;
         }
 
-        Vector2 vel = baseEnemy.rb.linearVelocity;
+        // =========================
+        // Base movement towards player
+        // =========================
+        Vector2 velocity = new Vector2(dir * baseEnemy.moveSpeed, baseEnemy.rb.linearVelocity.y);
 
-        if (dist > preferredDistance)
+        // =========================
+        // Separation from other enemies
+        // =========================
+        Collider2D[] nearby = Physics2D.OverlapCircleAll(
+            transform.position,
+            0.6f, // separation radius, can adjust
+            LayerMask.GetMask("Enemy")
+        );
+
+        Vector2 separation = Vector2.zero;
+
+        foreach (var other in nearby)
         {
-            vel = new Vector2(dir * baseEnemy.moveSpeed, vel.y);
-        }
-        else
-        {
-            vel = new Vector2(0f, vel.y);
+            if (other.gameObject == gameObject) continue;
+
+            Vector2 diff = (Vector2)(transform.position - other.transform.position);
+            separation += diff.normalized / diff.magnitude;
         }
 
-        baseEnemy.SetVelocity(vel);
+        // Apply separation strength (tweak multiplier as needed)
+        velocity += separation * 2f;
+
+        // =========================
+        // Set final velocity
+        // =========================
+        baseEnemy.SetVelocity(velocity);
+    }
+
+    // =========================
+    // ATTACK
+    // =========================
+    void Attack(float verticalDiff)
+    {
+        float dir = (baseEnemy.player.position.x > transform.position.x) ? 1f : -1f;
+
+        FacePlayer(dir);
+
+        if (verticalDiff > verticalIgnoreThreshold)
+        {
+            baseEnemy.StopHorizontal();
+            return;
+        }
+
+        baseEnemy.StopHorizontal();
+
+        if (attack != null)
+            attack.TryAttack();
     }
 
     // =========================
@@ -140,5 +197,16 @@ public class EnemyAI : MonoBehaviour
         Vector3 scale = transform.localScale;
         scale.x *= -1f;
         transform.localScale = scale;
+    }
+
+    void FacePlayer(float dir)
+    {
+        Vector3 scale = transform.localScale;
+
+        if ((dir > 0 && scale.x < 0) || (dir < 0 && scale.x > 0))
+        {
+            scale.x *= -1f;
+            transform.localScale = scale;
+        }
     }
 }

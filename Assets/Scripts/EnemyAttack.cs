@@ -1,73 +1,40 @@
-using System.Collections;
 using UnityEngine;
 
 public class EnemyAttack : MonoBehaviour
 {
-    public BaseEnemy baseEnemy;
+    protected BaseEnemy baseEnemy;
 
     [Header("Attack Settings")]
-    public float attackRange = 1.3f;
-    public float attackCooldown = 2f;
+    public float attackCooldown = 1f;
 
-    public float windupTime = 0.5f;
-    public float recoveryTime = 0.4f;
+    public virtual float GetAttackRange()
+    {
+        return 1.5f;
+    }
 
-    private float attackTimer;
+    protected float lastAttackTime;
 
-    [Header("Combo")]
-    public bool doCombo = true;
-
-    private void Awake()
+    protected virtual void Awake()
     {
         baseEnemy = GetComponent<BaseEnemy>();
     }
 
-    void Update()
+    public virtual bool CanAttack()
     {
-        if (baseEnemy.player == null) return;
-
-        attackTimer -= Time.deltaTime;
-
-        float dist = Vector2.Distance(transform.position, baseEnemy.player.position);
-
-        if (dist <= attackRange && attackTimer <= 0f)
-        {
-            StartCoroutine(AttackRoutine());
-        }
+        return Time.time >= lastAttackTime + attackCooldown;
     }
 
-    IEnumerator AttackRoutine()
+    public virtual void TryAttack()
     {
-        attackTimer = attackCooldown;
+        if (!CanAttack()) return;
 
-        if (doCombo)
-        {
-            yield return StartCoroutine(SingleHit());
-            yield return new WaitForSeconds(0.2f);
-            yield return StartCoroutine(SingleHit());
-        }
-        else
-        {
-            yield return StartCoroutine(SingleHit());
-        }
+        lastAttackTime = Time.time;
+        PerformAttack();
     }
 
-    IEnumerator SingleHit()
+    protected virtual void PerformAttack()
     {
-        // windup
-        yield return new WaitForSeconds(windupTime);
-
-        // DAMAGE (simple forward hitbox)
-        Vector2 pos = transform.position;
-        Collider2D hit = Physics2D.OverlapCircle(pos, attackRange);
-
-        if (hit != null && hit.CompareTag("Player"))
-        {
-            PlayerHealth ph = hit.GetComponent<PlayerHealth>();
-            if (ph != null)
-                ph.TakeDamage(baseEnemy.damage);
-        }
-
-        yield return new WaitForSeconds(recoveryTime);
+        // OVERRIDE THIS IN CHILD CLASSES
+        Debug.Log("Enemy attacked (base)");
     }
 }

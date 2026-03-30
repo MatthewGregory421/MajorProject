@@ -35,11 +35,22 @@ public class BaseEnemy : MonoBehaviour
         rb.linearVelocity = vel;
     }
 
+    public void StopHorizontal()
+    {
+        if (rb == null) return;
+        rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
+    }
+
     public void TakeDamage(int dmg)
     {
         currentHealth -= dmg;
 
         if (currentHealth <= 0)
-            Destroy(gameObject);
+            Die();
+    }
+
+    protected virtual void Die()
+    {
+        Destroy(gameObject);
     }
 }
