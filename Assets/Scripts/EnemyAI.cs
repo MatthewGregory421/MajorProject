@@ -3,11 +3,10 @@ using UnityEngine;
 public class EnemyAI : MonoBehaviour
 {
     private BaseEnemy baseEnemy;
-    private EnemyAttack attack;
+    private RandomBehaviorAttack attack;
 
     [Header("Detection")]
     public float detectionRange = 6f;
-    public float preferredDistance = 1.5f;
 
     [Header("Roaming")]
     public float roamSpeed = 1f;
@@ -32,13 +31,13 @@ public class EnemyAI : MonoBehaviour
     void Awake()
     {
         baseEnemy = GetComponent<BaseEnemy>();
-        attack = GetComponent<EnemyAttack>();
+        attack = GetComponent<RandomBehaviorAttack>();
 
         if (baseEnemy == null)
             Debug.LogError("EnemyAI: BaseEnemy missing!");
 
         if (attack == null)
-            Debug.LogWarning("EnemyAI: No EnemyAttack attached");
+            Debug.LogWarning("EnemyAI: No RandomBehaviorAttack attached");
     }
 
     void Update()
@@ -51,21 +50,15 @@ public class EnemyAI : MonoBehaviour
         float dist = Vector2.Distance(transform.position, baseEnemy.player.position);
         float verticalDiff = baseEnemy.player.position.y - transform.position.y;
 
-        // =========================
-        // STATE LOGIC
-        // =========================
-        float attackRange = attack != null ? attack.GetAttackRange() : preferredDistance;
-
+        // Determine state based on distance
         if (dist > detectionRange)
             state = State.Roam;
-        else if (dist > attackRange)
+        else if (dist > attack.GetAttackRange())
             state = State.Chase;
         else
             state = State.Attack;
 
-        // =========================
-        // EXECUTE STATE
-        // =========================
+        // Execute state
         switch (state)
         {
             case State.Roam:
@@ -77,7 +70,10 @@ public class EnemyAI : MonoBehaviour
                 break;
 
             case State.Attack:
-                Attack(verticalDiff);
+                if (attack != null)
+                {
+                    attack.HandleState(); // RandomBehaviorAttack handles its own movement
+                }
                 break;
         }
     }
@@ -135,17 +131,12 @@ public class EnemyAI : MonoBehaviour
             return;
         }
 
-        // =========================
-        // Base movement towards player
-        // =========================
         Vector2 velocity = new Vector2(dir * baseEnemy.moveSpeed, baseEnemy.rb.linearVelocity.y);
 
-        // =========================
         // Separation from other enemies
-        // =========================
         Collider2D[] nearby = Physics2D.OverlapCircleAll(
             transform.position,
-            0.6f, // separation radius, can adjust
+            0.6f,
             LayerMask.GetMask("Enemy")
         );
 
@@ -159,34 +150,9 @@ public class EnemyAI : MonoBehaviour
             separation += diff.normalized / diff.magnitude;
         }
 
-        // Apply separation strength (tweak multiplier as needed)
         velocity += separation * 2f;
 
-        // =========================
-        // Set final velocity
-        // =========================
         baseEnemy.SetVelocity(velocity);
-    }
-
-    // =========================
-    // ATTACK
-    // =========================
-    void Attack(float verticalDiff)
-    {
-        float dir = (baseEnemy.player.position.x > transform.position.x) ? 1f : -1f;
-
-        FacePlayer(dir);
-
-        if (verticalDiff > verticalIgnoreThreshold)
-        {
-            baseEnemy.StopHorizontal();
-            return;
-        }
-
-        baseEnemy.StopHorizontal();
-
-        if (attack != null)
-            attack.TryAttack();
     }
 
     // =========================
