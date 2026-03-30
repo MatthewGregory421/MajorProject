@@ -1,0 +1,40 @@
+using UnityEngine;
+
+public class EnemyAttack : MonoBehaviour
+{
+    protected BaseEnemy baseEnemy;
+
+    [Header("Attack Settings")]
+    public float attackCooldown = 1f;
+
+    public virtual float GetAttackRange()
+    {
+        return 1.5f;
+    }
+
+    protected float lastAttackTime;
+
+    protected virtual void Awake()
+    {
+        baseEnemy = GetComponent<BaseEnemy>();
+    }
+
+    public virtual bool CanAttack()
+    {
+        return Time.time >= lastAttackTime + attackCooldown;
+    }
+
+    public virtual void TryAttack()
+    {
+        if (!CanAttack()) return;
+
+        lastAttackTime = Time.time;
+        PerformAttack();
+    }
+
+    protected virtual void PerformAttack()
+    {
+        // OVERRIDE THIS IN CHILD CLASSES
+        Debug.Log("Enemy attacked (base)");
+    }
+}
