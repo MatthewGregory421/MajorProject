@@ -88,8 +88,6 @@ public class PlayerMovement : MonoBehaviour
         HandleLookDirection();
         CheckGrounded();
         HandleDash();
-
-        Debug.Log("Crouching: " + isCrouching);
     }
 
     private void FixedUpdate()
@@ -248,12 +246,6 @@ public class PlayerMovement : MonoBehaviour
 
                 SetEnemyCollision(true);
             }
-
-            Debug.Log("Player is grounded");
-        }
-        else
-        {
-            Debug.Log("Player is NOT grounded");
         }
     }
 

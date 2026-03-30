@@ -3,6 +3,7 @@ using UnityEngine;
 public class EnemyAttack : MonoBehaviour
 {
     protected BaseEnemy baseEnemy;
+    protected EnemyAI enemyAI;
 
     [Header("Attack Settings")]
     public float attackCooldown = 1f;
@@ -17,6 +18,8 @@ public class EnemyAttack : MonoBehaviour
     protected virtual void Awake()
     {
         baseEnemy = GetComponent<BaseEnemy>();
+        if (baseEnemy == null)
+            Debug.LogError("RandomBehaviorAttack: BaseEnemy component missing!");
     }
 
     public virtual bool CanAttack()
