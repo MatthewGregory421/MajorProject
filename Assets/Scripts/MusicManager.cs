@@ -2,16 +2,18 @@ using UnityEngine;
 
 public class MusicManager : MonoBehaviour
 {
-    public FMODUnity.StudioEventEmitter emitter1;
-    public FMODUnity.StudioEventEmitter emitter2;
+    public FMODUnity.StudioEventEmitter Over;
+    public FMODUnity.StudioEventEmitter Under;
 
     private void Start()
     {
-        emitter1.Play();
+        Over.Play();
+        Under.Play();
     }
 
     public void StopEmitter1()
     {
-        emitter1.Stop();
+        Over.Stop();
+        Under.Stop();
     }
 }

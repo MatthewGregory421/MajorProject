@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="Bank" id="{1bc69745-3a83-4c0e-9ab9-e127d64712a0}">
+		<property name="name">
+			<value>MusOA</value>
+		</property>
+		<relationship name="folder">
+			<destination>{fe6fe0fd-c06c-466d-ac84-f440131e32e6}</destination>
+		</relationship>
+	</object>
+</objects>
