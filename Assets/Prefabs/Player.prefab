@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 8751708677010052850}
   - component: {fileID: 6938584701886813832}
   - component: {fileID: 8378545687140109909}
-  - component: {fileID: 1068142177773130466}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -199,20 +198,6 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
---- !u!114 &1068142177773130466
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 654247038261356956}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2061e74794c9a4c22915db6b171b8faf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  emitter1: {fileID: 0}
-  emitter2: {fileID: 0}
 --- !u!1 &806569780330011211
 GameObject:
   m_ObjectHideFlags: 0
