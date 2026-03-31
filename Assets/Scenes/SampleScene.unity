@@ -264,6 +264,8 @@ GameObject:
   - component: {fileID: 90368731}
   - component: {fileID: 90368730}
   - component: {fileID: 90368729}
+  - component: {fileID: 90368733}
+  - component: {fileID: 90368732}
   m_Layer: 0
   m_Name: Square (11)
   m_TagString: Untagged
@@ -387,6 +389,64 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &90368732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 90368728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Player
+  Emitters:
+  - Target: {fileID: 519420034}
+    Params:
+    - Name: MusSo
+      Value: 0
+    - Name: MusHo
+      Value: 0
+    - Name: MusAo
+      Value: 1
+    - Name: MusTH
+      Value: 0
+    - Name: MusTA
+      Value: 0
+    - Name: MusTS
+      Value: 0
+  TriggerEvent: 6
+--- !u!114 &90368733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 90368728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Player
+  Emitters:
+  - Target: {fileID: 519420034}
+    Params:
+    - Name: MusTS
+      Value: 0
+    - Name: MusTH
+      Value: 0
+    - Name: MusTA
+      Value: 1
+    - Name: MusSo
+      Value: 0
+    - Name: MusHo
+      Value: 0
+    - Name: MusAo
+      Value: 0
+  TriggerEvent: 5
 --- !u!1 &113152994
 GameObject:
   m_ObjectHideFlags: 0
@@ -629,6 +689,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 5
   currentHealth: 0
+  knockbackForce: 5
+  flashDuration: 0.2
 --- !u!1 &132950712
 GameObject:
   m_ObjectHideFlags: 0
@@ -804,8 +866,10 @@ GameObject:
   m_Component:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
-  - component: {fileID: 519420029}
   - component: {fileID: 519420030}
+  - component: {fileID: 519420033}
+  - component: {fileID: 519420035}
+  - component: {fileID: 519420034}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -813,14 +877,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &519420029
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
 --- !u!114 &519420030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -931,6 +987,73 @@ Transform:
   m_Children: []
   m_Father: {fileID: 113152996}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nonRigidbodyVelocity: 0
+  attenuationObject: {fileID: 0}
+--- !u!114 &519420034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1601005388
+      Data2: 1124734198
+      Data3: -949778816
+      Data4: -1250576952
+    Path: event:/Music
+  Event: 
+  EventPlayTrigger: 11
+  EventStopTrigger: 12
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params:
+  - Name: MusHo
+    Value: 1
+  - Name: MusTH
+    Value: 1
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &519420035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9468c5f457ace64f8d4df6d642b107f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LoadEvent: 7
+  UnloadEvent: 8
+  Banks:
+  - Music
+  CollisionTag: 
+  PreloadSamples: 0
 --- !u!1 &562317873
 GameObject:
   m_ObjectHideFlags: 0
@@ -1646,6 +1769,8 @@ MonoBehaviour:
   rb: {fileID: 937628632}
   sr: {fileID: 937628633}
   player: {fileID: 113152996}
+  knockbackForce: 5
+  flashDuration: 0.2
 --- !u!70 &937628637
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -2114,6 +2239,8 @@ MonoBehaviour:
   rb: {fileID: 1253948358}
   sr: {fileID: 1253948359}
   player: {fileID: 113152996}
+  knockbackForce: 5
+  flashDuration: 0.2
 --- !u!50 &1253948358
 Rigidbody2D:
   serializedVersion: 5
@@ -2225,6 +2352,8 @@ GameObject:
   - component: {fileID: 1268351188}
   - component: {fileID: 1268351187}
   - component: {fileID: 1268351186}
+  - component: {fileID: 1268351190}
+  - component: {fileID: 1268351189}
   m_Layer: 0
   m_Name: Square (9)
   m_TagString: Untagged
@@ -2323,7 +2452,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.8018868, g: 0.018912422, b: 0.018912422, a: 0.18431373}
+  m_Color: {r: 0.01960783, g: 0.18818787, b: 0.8, a: 0.18431373}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2348,6 +2477,64 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1268351189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268351185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Player
+  Emitters:
+  - Target: {fileID: 519420034}
+    Params:
+    - Name: MusAo
+      Value: 0
+    - Name: MusHo
+      Value: 0
+    - Name: MusSo
+      Value: 1
+    - Name: MusTA
+      Value: 0
+    - Name: MusTH
+      Value: 0
+    - Name: MusTS
+      Value: 0
+  TriggerEvent: 6
+--- !u!114 &1268351190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268351185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Player
+  Emitters:
+  - Target: {fileID: 519420034}
+    Params:
+    - Name: MusAo
+      Value: 0
+    - Name: MusHo
+      Value: 0
+    - Name: MusSo
+      Value: 0
+    - Name: MusTA
+      Value: 0
+    - Name: MusTH
+      Value: 0
+    - Name: MusTS
+      Value: 1
+  TriggerEvent: 5
 --- !u!1 &1374846955
 GameObject:
   m_ObjectHideFlags: 0
@@ -2792,6 +2979,8 @@ GameObject:
   - component: {fileID: 1701171249}
   - component: {fileID: 1701171248}
   - component: {fileID: 1701171247}
+  - component: {fileID: 1701171251}
+  - component: {fileID: 1701171250}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -2890,7 +3079,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.8018868, g: 0.018912422, b: 0.018912422, a: 0.18431373}
+  m_Color: {r: 0.8, g: 0.01960783, b: 0.6939027, a: 0.18431373}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2915,6 +3104,64 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1701171250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701171246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Player
+  Emitters:
+  - Target: {fileID: 519420034}
+    Params:
+    - Name: MusTS
+      Value: 0
+    - Name: MusTH
+      Value: 0
+    - Name: MusTA
+      Value: 0
+    - Name: MusSo
+      Value: 0
+    - Name: MusHo
+      Value: 1
+    - Name: MusAo
+      Value: 0
+  TriggerEvent: 6
+--- !u!114 &1701171251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701171246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Player
+  Emitters:
+  - Target: {fileID: 519420034}
+    Params:
+    - Name: MusAo
+      Value: 0
+    - Name: MusHo
+      Value: 0
+    - Name: MusSo
+      Value: 0
+    - Name: MusTA
+      Value: 0
+    - Name: MusTS
+      Value: 0
+    - Name: MusTH
+      Value: 1
+  TriggerEvent: 5
 --- !u!1 &1721847554
 GameObject:
   m_ObjectHideFlags: 0
