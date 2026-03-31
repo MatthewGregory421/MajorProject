@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
+    public DeathManager deathManager;
+
     [Header("Health")]
     public int maxHealth = 5;
     public int currentHealth;
@@ -21,6 +23,14 @@ public class PlayerHealth : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         if (spriteRenderer != null)
             originalColor = spriteRenderer.color;
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            KillPlayer();
+        }
     }
 
     // Simple damage + knockback + flash
@@ -64,6 +74,11 @@ public class PlayerHealth : MonoBehaviour
     void Die()
     {
         Debug.Log("Player died!");
-        // TODO: respawn / game over
+        deathManager.PlayerDied();
+    }
+
+    void KillPlayer()
+    {
+        currentHealth = 1;
     }
 }
