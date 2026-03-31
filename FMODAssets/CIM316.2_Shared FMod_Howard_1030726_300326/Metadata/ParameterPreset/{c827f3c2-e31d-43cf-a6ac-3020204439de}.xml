@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="ParameterPreset" id="{c827f3c2-e31d-43cf-a6ac-3020204439de}">
+		<property name="name">
+			<value>MusAo</value>
+		</property>
+		<relationship name="folder">
+			<destination>{9b59c80b-5075-417b-b66a-56323724fb81}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{f3871bd4-ce35-4887-9838-c16d9f2feac6}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{f3871bd4-ce35-4887-9838-c16d9f2feac6}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
