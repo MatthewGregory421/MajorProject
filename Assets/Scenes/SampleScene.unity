@@ -143,13 +143,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 10031895}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a937c04f69c21df45803d123f94cf972, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emitter1: {fileID: 1991409735}
-  emitter2: {fileID: 1991409737}
+  Over: {fileID: 0}
+  Under: {fileID: 0}
 --- !u!4 &10031897
 Transform:
   m_ObjectHideFlags: 0
@@ -310,8 +310,6 @@ GameObject:
   - component: {fileID: 90368731}
   - component: {fileID: 90368730}
   - component: {fileID: 90368729}
-  - component: {fileID: 90368733}
-  - component: {fileID: 90368732}
   m_Layer: 0
   m_Name: Square (11)
   m_TagString: Untagged
@@ -435,64 +433,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &90368732
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 90368728}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: Player
-  Emitters:
-  - Target: {fileID: 519420034}
-    Params:
-    - Name: MusSo
-      Value: 0
-    - Name: MusHo
-      Value: 0
-    - Name: MusAo
-      Value: 1
-    - Name: MusTH
-      Value: 0
-    - Name: MusTA
-      Value: 0
-    - Name: MusTS
-      Value: 0
-  TriggerEvent: 6
---- !u!114 &90368733
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 90368728}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: Player
-  Emitters:
-  - Target: {fileID: 519420034}
-    Params:
-    - Name: MusTS
-      Value: 0
-    - Name: MusTH
-      Value: 0
-    - Name: MusTA
-      Value: 1
-    - Name: MusSo
-      Value: 0
-    - Name: MusHo
-      Value: 0
-    - Name: MusAo
-      Value: 0
-  TriggerEvent: 5
 --- !u!4 &113152996 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2057095057378157655, guid: ec21d75db2ae9435a8e8be4b756f0192, type: 3}
@@ -637,8 +577,8 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8378545687140109909, guid: ec21d75db2ae9435a8e8be4b756f0192, type: 3}
   m_PrefabInstance: {fileID: 1972261277342243522}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 0
+  m_GameObject: {fileID: 1972261277342243523}
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
@@ -1989,8 +1929,6 @@ GameObject:
   - component: {fileID: 1268351188}
   - component: {fileID: 1268351187}
   - component: {fileID: 1268351186}
-  - component: {fileID: 1268351190}
-  - component: {fileID: 1268351189}
   m_Layer: 0
   m_Name: Square (9)
   m_TagString: Untagged
@@ -2089,7 +2027,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.01960783, g: 0.18818787, b: 0.8, a: 0.18431373}
+  m_Color: {r: 0.8, g: 0.019607844, b: 0.019607844, a: 0.18431373}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2114,64 +2052,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1268351189
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1268351185}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: Player
-  Emitters:
-  - Target: {fileID: 519420034}
-    Params:
-    - Name: MusAo
-      Value: 0
-    - Name: MusHo
-      Value: 0
-    - Name: MusSo
-      Value: 1
-    - Name: MusTA
-      Value: 0
-    - Name: MusTH
-      Value: 0
-    - Name: MusTS
-      Value: 0
-  TriggerEvent: 6
---- !u!114 &1268351190
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1268351185}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: Player
-  Emitters:
-  - Target: {fileID: 519420034}
-    Params:
-    - Name: MusAo
-      Value: 0
-    - Name: MusHo
-      Value: 0
-    - Name: MusSo
-      Value: 0
-    - Name: MusTA
-      Value: 0
-    - Name: MusTH
-      Value: 0
-    - Name: MusTS
-      Value: 1
-  TriggerEvent: 5
 --- !u!1 &1374846955
 GameObject:
   m_ObjectHideFlags: 0
@@ -2719,8 +2599,6 @@ GameObject:
   - component: {fileID: 1701171249}
   - component: {fileID: 1701171248}
   - component: {fileID: 1701171247}
-  - component: {fileID: 1701171251}
-  - component: {fileID: 1701171250}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -2819,7 +2697,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.8, g: 0.01960783, b: 0.6939027, a: 0.18431373}
+  m_Color: {r: 0.8, g: 0.01960783, b: 0.019607844, a: 0.18431373}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2844,64 +2722,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1701171250
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1701171246}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: Player
-  Emitters:
-  - Target: {fileID: 519420034}
-    Params:
-    - Name: MusTS
-      Value: 0
-    - Name: MusTH
-      Value: 0
-    - Name: MusTA
-      Value: 0
-    - Name: MusSo
-      Value: 0
-    - Name: MusHo
-      Value: 1
-    - Name: MusAo
-      Value: 0
-  TriggerEvent: 6
---- !u!114 &1701171251
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1701171246}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: Player
-  Emitters:
-  - Target: {fileID: 519420034}
-    Params:
-    - Name: MusAo
-      Value: 0
-    - Name: MusHo
-      Value: 0
-    - Name: MusSo
-      Value: 0
-    - Name: MusTA
-      Value: 0
-    - Name: MusTS
-      Value: 0
-    - Name: MusTH
-      Value: 1
-  TriggerEvent: 5
 --- !u!1 &1721847554
 GameObject:
   m_ObjectHideFlags: 0
@@ -3536,10 +3356,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1991409736}
-  - component: {fileID: 1991409735}
-  - component: {fileID: 1991409737}
   - component: {fileID: 1991409738}
   - component: {fileID: 1991409739}
+  - component: {fileID: 1991409740}
+  - component: {fileID: 1991409741}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -3547,41 +3367,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1991409735
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1991409734}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: -1601005388
-      Data2: 1124734198
-      Data3: -949778816
-      Data4: -1250576952
-    Path: event:/Music
-  Event: 
-  EventPlayTrigger: 0
-  EventStopTrigger: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  NonRigidbodyVelocity: 0
-  Params:
-  - Name: MusHo
-    Value: 1
-  - Name: MusTH
-    Value: 1
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!4 &1991409736
 Transform:
   m_ObjectHideFlags: 0
@@ -3597,49 +3382,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1991409737
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1991409734}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: -1601005388
-      Data2: 1124734198
-      Data3: -949778816
-      Data4: -1250576952
-    Path: event:/Music
-  Event: 
-  EventPlayTrigger: 0
-  EventStopTrigger: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  NonRigidbodyVelocity: 0
-  Params:
-  - Name: MusAo
-    Value: 1
-  - Name: MusHo
-    Value: 0
-  - Name: MusSo
-    Value: 0
-  - Name: MusTA
-    Value: 1
-  - Name: MusTH
-    Value: 0
-  - Name: MusTS
-    Value: 0
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!114 &1991409738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3652,7 +3394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3378e3877ab90481c92e4dab6747e165, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicManager: {fileID: 10031896}
+  musicManager: {fileID: 1991409740}
 --- !u!114 &1991409739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3665,8 +3407,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ef7ef89f88e97c4a8d5a885ba333a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicManager: {fileID: 10031896}
+  musicManager: {fileID: 1991409740}
   deathCanvas: {fileID: 1563942487}
+--- !u!114 &1991409740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1991409734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a937c04f69c21df45803d123f94cf972, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Over: {fileID: 519420034}
+  Under: {fileID: 1972261277342243524}
+--- !u!114 &1991409741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1991409734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9468c5f457ace64f8d4df6d642b107f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LoadEvent: 7
+  UnloadEvent: 8
+  Banks:
+  - MusOH
+  CollisionTag: 
+  PreloadSamples: 0
 --- !u!1 &1997316897
 GameObject:
   m_ObjectHideFlags: 0
@@ -3907,11 +3681,11 @@ PrefabInstance:
     - target: {fileID: 1068142177773130466, guid: ec21d75db2ae9435a8e8be4b756f0192, type: 3}
       propertyPath: emitter1
       value: 
-      objectReference: {fileID: 1991409735}
+      objectReference: {fileID: 0}
     - target: {fileID: 1068142177773130466, guid: ec21d75db2ae9435a8e8be4b756f0192, type: 3}
       propertyPath: emitter2
       value: 
-      objectReference: {fileID: 1991409737}
+      objectReference: {fileID: 0}
     - target: {fileID: 1068142177773130466, guid: ec21d75db2ae9435a8e8be4b756f0192, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -3964,11 +3738,95 @@ PrefabInstance:
       propertyPath: deathManager
       value: 
       objectReference: {fileID: 1991409739}
-    m_RemovedComponents: []
+    - target: {fileID: 6938584701886813832, guid: ec21d75db2ae9435a8e8be4b756f0192, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8378545687140109909, guid: ec21d75db2ae9435a8e8be4b756f0192, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8378545687140109909, guid: ec21d75db2ae9435a8e8be4b756f0192, type: 3}
+      propertyPath: AllowFadeout
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8378545687140109909, guid: ec21d75db2ae9435a8e8be4b756f0192, type: 3}
+      propertyPath: Params.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8378545687140109909, guid: ec21d75db2ae9435a8e8be4b756f0192, type: 3}
+      propertyPath: EventReference.Path
+      value: event:/oH/AlloH
+      objectReference: {fileID: 0}
+    - target: {fileID: 8378545687140109909, guid: ec21d75db2ae9435a8e8be4b756f0192, type: 3}
+      propertyPath: EventReference.Guid.Data1
+      value: -486788689
+      objectReference: {fileID: 0}
+    - target: {fileID: 8378545687140109909, guid: ec21d75db2ae9435a8e8be4b756f0192, type: 3}
+      propertyPath: EventReference.Guid.Data2
+      value: 1298379568
+      objectReference: {fileID: 0}
+    - target: {fileID: 8378545687140109909, guid: ec21d75db2ae9435a8e8be4b756f0192, type: 3}
+      propertyPath: EventReference.Guid.Data3
+      value: 2004485553
+      objectReference: {fileID: 0}
+    - target: {fileID: 8378545687140109909, guid: ec21d75db2ae9435a8e8be4b756f0192, type: 3}
+      propertyPath: EventReference.Guid.Data4
+      value: 879487636
+      objectReference: {fileID: 0}
+    - target: {fileID: 8378545687140109909, guid: ec21d75db2ae9435a8e8be4b756f0192, type: 3}
+      propertyPath: Params.Array.data[0].Value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8378545687140109909, guid: ec21d75db2ae9435a8e8be4b756f0192, type: 3}
+      propertyPath: Params.Array.data[1].Value
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6938584701886813832, guid: ec21d75db2ae9435a8e8be4b756f0192, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 654247038261356956, guid: ec21d75db2ae9435a8e8be4b756f0192, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1972261277342243524}
   m_SourcePrefab: {fileID: 100100000, guid: ec21d75db2ae9435a8e8be4b756f0192, type: 3}
+--- !u!1 &1972261277342243523 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 654247038261356956, guid: ec21d75db2ae9435a8e8be4b756f0192, type: 3}
+  m_PrefabInstance: {fileID: 1972261277342243522}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1972261277342243524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1972261277342243523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 194052085
+      Data2: 1162380492
+      Data3: -269079144
+      Data4: -606036715
+    Path: event:/oH/uH
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
