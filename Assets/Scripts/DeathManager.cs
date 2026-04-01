@@ -26,7 +26,7 @@ public class DeathManager : MonoBehaviour
     public void PlayerDied()
     {
         playerDead = true;
-        musicManager.StopEmitter1();
+        musicManager.StopMusEmitter();
         deathCanvas.SetActive(true);
     }
 }
