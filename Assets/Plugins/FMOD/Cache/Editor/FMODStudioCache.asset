@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: FMODAssets/CIM316.2_Shared FMod_Howard_1030726_300326/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639105730343995019
+  lastModified: 639105606426005172
   FileSizes:
   - Name: Desktop
     Value: 1074
@@ -62,7 +62,7 @@ MonoBehaviour:
   Path: FMODAssets/CIM316.2_Shared FMod_Howard_1030726_300326/Build/Desktop/MusOH.bank
   Name: MusOH
   StudioPath: bank:/MusOH
-  lastModified: 639105739141687960
+  lastModified: 639105776142420450
   FileSizes:
   - Name: Desktop
     Value: 1579840
@@ -217,7 +217,7 @@ MonoBehaviour:
   Path: FMODAssets/CIM316.2_Shared FMod_Howard_1030726_300326/Build/Desktop/MusOS.bank
   Name: MusOS
   StudioPath: bank:/MusOS
-  lastModified: 639105739141358448
+  lastModified: 639105776142575533
   FileSizes:
   - Name: Desktop
     Value: 1648160
@@ -314,7 +314,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 8999953657572529065}
   cacheVersion: 131858
-  cacheTime: 639105739141687960
+  cacheTime: 639105776142575533
   SerializableEventsDict:
   - key: event:/oA/uA
     index: 0
@@ -411,7 +411,7 @@ MonoBehaviour:
   Path: FMODAssets/CIM316.2_Shared FMod_Howard_1030726_300326/Build/Desktop/MusOA.bank
   Name: MusOA
   StudioPath: bank:/MusOA
-  lastModified: 639105739141108213
+  lastModified: 639105776142260403
   FileSizes:
   - Name: Desktop
     Value: 1628576
@@ -512,7 +512,7 @@ MonoBehaviour:
   Path: FMODAssets/CIM316.2_Shared FMod_Howard_1030726_300326/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639105730343998892
+  lastModified: 639105776142110377
   FileSizes:
   - Name: Desktop
     Value: 1594
