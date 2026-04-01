@@ -10,9 +10,16 @@ public class RandomBehaviorAttack : EnemyAttack
     private ActionState currentState = ActionState.Idle;
 
     [Header("Movement")]
-    public float backAwaySpeed = 2f;
     public float chargeSpeed = 4f;
     public float maxChargeDistance = 3f;
+
+    [Header("Back Away Settings")]
+    public float backAwayDistance = 3f;  // how far to move backwards
+    public float backAwaySpeed = 2f;     // speed while backing up
+
+    private bool backAwayInitialized = false;
+    private Vector2 backAwayStartPos;
+    private int backAwayDirection; // +1 = right, -1 = left
 
     [Header("Action Cooldowns")]
     public float chargeCooldown = 3f;
@@ -24,9 +31,6 @@ public class RandomBehaviorAttack : EnemyAttack
     private bool hasAttackedDuringCharge;
     private float actionDuration;
 
-    private float backAwayDirection;
-    private bool backAwayInitialized = false;
-
     [Header("Collision / Attack Settings")]
     public int collisionDamage = 1;
 
@@ -35,6 +39,9 @@ public class RandomBehaviorAttack : EnemyAttack
 
     [Header("Safety")]
     public float verticalIgnoreThreshold = 1.0f;
+
+    public enum TestAttackMode { None, NormalAttack, Charge, BackAway, IdleMove }
+    public TestAttackMode testMode = TestAttackMode.None;
 
     // =========================
     // MAIN UPDATE
@@ -45,11 +52,21 @@ public class RandomBehaviorAttack : EnemyAttack
             return;
 
         float verticalDiff = Mathf.Abs(baseEnemy.player.position.y - transform.position.y);
+
+        // Only stop movement if too high, but allow attack
         if (verticalDiff > verticalIgnoreThreshold)
         {
             baseEnemy.SetVelocity(Vector2.zero);
-            currentState = ActionState.Idle;
-            Debug.Log("Vertical diff too high, staying Idle");
+
+            // Force attack if possible
+            if (CanNormalAttack())
+            {
+                currentState = ActionState.Attacking;
+                PerformAttack();
+                lastAttackTime = Time.time;
+                actionDuration = 0.5f;
+            }
+
             return;
         }
 
@@ -64,30 +81,32 @@ public class RandomBehaviorAttack : EnemyAttack
             }
         }
 
+        // STATE MACHINE
         switch (currentState)
         {
             case ActionState.Idle:
-                Debug.Log("State: Idle");
                 HandleDecision();
                 break;
             case ActionState.BackingUp:
-                if (!backAwayInitialized)
-                {
-                    backAwayDirection = Mathf.Sign(transform.position.x - baseEnemy.player.position.x);
-                    backAwayInitialized = true;
-                }
-                BackAway();
+                BackAway(); // ONLY BackAway sets velocity here
                 break;
             case ActionState.Charging:
-                Debug.Log("State: Charging");
                 ChargeForward();
                 break;
             case ActionState.IdleMove:
-                Debug.Log("State: IdleMove");
-                IdleMove();
+                HandleDecision();
+
+                // Optional: automatic test attack even if player out of range
+                if (CanNormalAttack())
+                {
+                    currentState = ActionState.Attacking;
+                    PerformAttack();
+                    lastAttackTime = Time.time;
+                    actionDuration = 0.5f;
+                    Debug.Log("Idle attack performed from current position");
+                }
                 break;
             case ActionState.Attacking:
-                Debug.Log("State: Attacking");
                 baseEnemy.SetVelocity(Vector2.zero);
                 break;
         }
@@ -98,11 +117,39 @@ public class RandomBehaviorAttack : EnemyAttack
     // =========================
     void HandleDecision()
     {
+        if (baseEnemy == null || baseEnemy.player == null)
+            return;
+
+        // ----------- TEST MODE ----------- 
+        if (testMode != TestAttackMode.None)
+        {
+            switch (testMode)
+            {
+                case TestAttackMode.NormalAttack:
+                    currentState = ActionState.Attacking;
+                    PerformAttack();
+                    actionDuration = 0.5f;
+                    return;
+                case TestAttackMode.Charge:
+                    StartCharge();
+                    return;
+                case TestAttackMode.BackAway:
+                    currentState = ActionState.BackingUp;
+                    backAwayInitialized = false;
+                    actionDuration = 0.5f;
+                    return;
+                case TestAttackMode.IdleMove:
+                    currentState = ActionState.IdleMove;
+                    actionDuration = 0.5f;
+                    return;
+            }
+        }
+
+        // ----------- NORMAL RANDOM DECISION -----------
         if (Time.time < nextDecisionTime)
             return;
 
         nextDecisionTime = Time.time + decisionCooldown;
-
         baseEnemy.SetVelocity(Vector2.zero);
 
         var possibleActions = new System.Collections.Generic.List<int>();
@@ -118,26 +165,22 @@ public class RandomBehaviorAttack : EnemyAttack
             case 1:
                 StartCharge();
                 lastChargeTime = Time.time;
-                Debug.Log("Decision: StartCharge");
                 break;
             case 2:
                 currentState = ActionState.BackingUp;
                 lastBackAwayTime = Time.time;
                 actionDuration = 0.5f;
                 backAwayInitialized = false;
-                Debug.Log("Decision: BackAway");
                 break;
             case 3:
+                currentState = ActionState.Attacking;
                 PerformAttack();
                 lastAttackTime = Time.time;
-                currentState = ActionState.Attacking;
                 actionDuration = 0.5f;
-                Debug.Log("Decision: PerformAttack");
                 break;
             case 4:
                 currentState = ActionState.IdleMove;
                 actionDuration = 0.5f;
-                Debug.Log("Decision: IdleMove");
                 break;
         }
     }
@@ -151,31 +194,43 @@ public class RandomBehaviorAttack : EnemyAttack
     // =========================
     void BackAway()
     {
+        if (!backAwayInitialized)
+        {
+            backAwayStartPos = transform.position;
+            backAwayDirection = transform.localScale.x > 0 ? -1 : 1; // backward relative to facing
+            backAwayInitialized = true;
+        }
+
+        // Raycast for walls behind
         RaycastHit2D hit = Physics2D.Raycast(
             transform.position,
-            new Vector2(backAwayDirection, 0f),
-            0.5f,
+            new Vector2(backAwayDirection, 0),
+            0.2f,
             LayerMask.GetMask("Ground", "Obstacle")
         );
 
         if (hit)
         {
-            baseEnemy.SetVelocity(Vector2.zero);
-            actionDuration = 0f;
-            currentState = ActionState.Idle;
-            backAwayInitialized = false;
-            Debug.Log("Backing up stopped due to wall");
+            StopBackAway();
             return;
         }
 
+        // Move backward
         baseEnemy.SetVelocity(new Vector2(backAwayDirection * backAwaySpeed, baseEnemy.rb.linearVelocity.y));
 
-        if (actionDuration <= 0f)
+        // Stop after reaching target distance
+        float distanceMoved = Mathf.Abs(transform.position.x - backAwayStartPos.x);
+        if (distanceMoved >= backAwayDistance)
         {
-            currentState = ActionState.Idle;
-            backAwayInitialized = false;
-            Debug.Log("Backing up finished");
+            StopBackAway();
         }
+    }
+
+    void StopBackAway()
+    {
+        baseEnemy.SetVelocity(Vector2.zero);
+        currentState = ActionState.Idle;
+        backAwayInitialized = false;
     }
 
     // =========================
@@ -205,13 +260,11 @@ public class RandomBehaviorAttack : EnemyAttack
 
     void PerformChargeAttack()
     {
-        // Deal damage to player
         var playerHealth = baseEnemy.player.GetComponent<PlayerHealth>();
         if (playerHealth != null)
         {
             Vector2 knockDir = (baseEnemy.player.position - transform.position).normalized;
             playerHealth.TakeDamage(collisionDamage, knockDir);
-            Debug.Log("Player hit by charge, taking damage");
         }
 
         hasAttackedDuringCharge = true;
@@ -226,8 +279,8 @@ public class RandomBehaviorAttack : EnemyAttack
         if (currentState == ActionState.Charging)
         {
             bool hitPlayer = collision.gameObject.CompareTag("Player");
-            bool hitWall = collision.gameObject.layer == LayerMask.NameToLayer("Ground")
-                           || collision.gameObject.layer == LayerMask.NameToLayer("Obstacle");
+            bool hitWall = collision.gameObject.layer == LayerMask.NameToLayer("Ground") ||
+                           collision.gameObject.layer == LayerMask.NameToLayer("Obstacle");
 
             if (hitPlayer)
             {
@@ -245,7 +298,6 @@ public class RandomBehaviorAttack : EnemyAttack
                 lastBackAwayTime = Time.time;
                 actionDuration = 0.5f;
                 backAwayInitialized = false;
-                Debug.Log("Charge interrupted due to collision. Switching to BackingUp");
             }
         }
     }
@@ -253,14 +305,13 @@ public class RandomBehaviorAttack : EnemyAttack
     // =========================
     // BASIC ATTACK
     // =========================
-    void PerformAttack()
+    protected override void PerformAttack()
     {
         var playerHealth = baseEnemy.player.GetComponent<PlayerHealth>();
         if (playerHealth != null)
         {
             Vector2 knockDir = (baseEnemy.player.position - transform.position).normalized;
             playerHealth.TakeDamage(collisionDamage, knockDir);
-            Debug.Log("Player hit by basic attack");
         }
     }
 
@@ -269,8 +320,18 @@ public class RandomBehaviorAttack : EnemyAttack
     // =========================
     void IdleMove()
     {
-        float dir = Mathf.Sign(baseEnemy.player.position.x - transform.position.x);
-        baseEnemy.SetVelocity(new Vector2(dir * 0.5f, baseEnemy.rb.linearVelocity.y));
+        // Stay in place; no movement
+        baseEnemy.SetVelocity(Vector2.zero);
+
+        // Optionally, attempt attack
+        if (CanNormalAttack())
+        {
+            currentState = ActionState.Attacking;
+            PerformAttack();
+            lastAttackTime = Time.time;
+            actionDuration = 0.5f;
+            Debug.Log("IdleMove attack performed from current position");
+        }
     }
 
     public override void TryAttack()

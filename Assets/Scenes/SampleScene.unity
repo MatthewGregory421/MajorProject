@@ -1399,14 +1399,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackCooldown: 1
   decisionCooldown: 1
-  backAwaySpeed: 2
   chargeSpeed: 4
   maxChargeDistance: 3
+  backAwayDistance: 3
+  backAwaySpeed: 2
   chargeCooldown: 3
   backAwayCooldown: 2
   normalAttackCooldown: 1
   collisionDamage: 1
   verticalIgnoreThreshold: 1
+  testMode: 0
 --- !u!1 &999458730
 GameObject:
   m_ObjectHideFlags: 0
@@ -1762,15 +1764,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackCooldown: 1
-  decisionCooldown: 1
-  backAwaySpeed: 2
+  decisionCooldown: 3
   chargeSpeed: 4
   maxChargeDistance: 3
+  backAwayDistance: 3
+  backAwaySpeed: 2
   chargeCooldown: 3
   backAwayCooldown: 2
   normalAttackCooldown: 1
   collisionDamage: 1
   verticalIgnoreThreshold: 1
+  testMode: 0
 --- !u!114 &1253948356
 MonoBehaviour:
   m_ObjectHideFlags: 0
