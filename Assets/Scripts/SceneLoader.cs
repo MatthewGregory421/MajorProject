@@ -6,7 +6,7 @@ public class SceneLoader : MonoBehaviour
     public MusicManager musicManager;
     public void LoadScene()
     {
-        musicManager.StopEmitter1();
+        musicManager.StopMusEmitter();
         SceneManager.LoadScene("TestScene");
     }
 }
