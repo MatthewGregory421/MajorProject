@@ -3458,10 +3458,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1991409736}
+  - component: {fileID: 1991409741}
   - component: {fileID: 1991409738}
   - component: {fileID: 1991409739}
   - component: {fileID: 1991409740}
-  - component: {fileID: 1991409741}
+  - component: {fileID: 1991409742}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -3537,12 +3538,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9468c5f457ace64f8d4df6d642b107f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LoadEvent: 7
-  UnloadEvent: 8
+  LoadEvent: 1
+  UnloadEvent: 2
   Banks:
   - MusOH
+  - SFX
   CollisionTag: 
   PreloadSamples: 0
+--- !u!114 &1991409742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1991409734}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c1142726b1c34885b43950b327a710d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerDash: {fileID: 449535561}
+  PlayerJump: {fileID: 449535554}
+  PlayerAttack: {fileID: 449535562}
 --- !u!1 &1997316897
 GameObject:
   m_ObjectHideFlags: 0
