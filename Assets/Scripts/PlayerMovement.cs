@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask groundLayer;
 
     public Rigidbody2D rb;
+    public FMODUnity.StudioEventEmitter dashEmitter;
     private float moveInput;
     public bool isGrounded;
 
@@ -197,11 +198,13 @@ public class PlayerMovement : MonoBehaviour
             {
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
                 canDoubleJump = true;
+                GetComponent<FMODUnity.StudioEventEmitter>().Play();
             }
             else if (doubleJumpEnabled && canDoubleJump)
             {
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
                 canDoubleJump = false;
+                GetComponent<FMODUnity.StudioEventEmitter>().Play();
             }
         }
     }
@@ -325,6 +328,7 @@ public class PlayerMovement : MonoBehaviour
         dashDirection = lookHorizontal;
 
         rb.gravityScale = 0f; // optional freeze gravity
+        dashEmitter.Play();
     }
 
     void EndDash()

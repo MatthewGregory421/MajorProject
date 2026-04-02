@@ -5,6 +5,8 @@ public class PlayerCombat : MonoBehaviour
 {
     private PlayerMovement movement;
 
+    public FMODUnity.StudioEventEmitter attackEmitter;
+
     [Header("Attack Settings")]
     public float attackCooldown = 0.3f;
     private float attackTimer;
@@ -91,6 +93,8 @@ public class PlayerCombat : MonoBehaviour
         Vector3 spawnPos = transform.position + (Vector3)(dir * attackDistance);
         GameObject indicator = Instantiate(attackPrefab, spawnPos, Quaternion.identity);
         Destroy(indicator, 0.5f);
+
+        attackEmitter.Play();
 
         // Damage check
         Collider2D[] hits = Physics2D.OverlapCircleAll(spawnPos, 0.5f);
