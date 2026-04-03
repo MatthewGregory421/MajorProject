@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class RandomBehaviorAttack : EnemyAttack
 {
+    public SadnessSFXManager sadnessSFXManager;
+
     [Header("Behaviour Settings")]
     public float decisionCooldown = 1.5f;
     private float nextDecisionTime;
@@ -307,6 +309,8 @@ public class RandomBehaviorAttack : EnemyAttack
     // =========================
     protected override void PerformAttack()
     {
+        sadnessSFXManager.PlaySadnessAttackEmitter();
+
         var playerHealth = baseEnemy.player.GetComponent<PlayerHealth>();
         if (playerHealth != null)
         {

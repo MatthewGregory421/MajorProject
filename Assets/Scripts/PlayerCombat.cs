@@ -4,8 +4,7 @@ using System.Collections.Generic;
 public class PlayerCombat : MonoBehaviour
 {
     private PlayerMovement movement;
-
-    public FMODUnity.StudioEventEmitter attackEmitter;
+    public PlayerSFXManager sfxManager;
 
     [Header("Attack Settings")]
     public float attackCooldown = 0.3f;
@@ -94,7 +93,7 @@ public class PlayerCombat : MonoBehaviour
         GameObject indicator = Instantiate(attackPrefab, spawnPos, Quaternion.identity);
         Destroy(indicator, 0.5f);
 
-        attackEmitter.Play();
+        sfxManager.PlayPlayerAttackEmitter();
 
         // Damage check
         Collider2D[] hits = Physics2D.OverlapCircleAll(spawnPos, 0.5f);
@@ -133,7 +132,11 @@ public class PlayerCombat : MonoBehaviour
 
     public void SpawnGroundSlamIndicators()
     {
+        GroundSlam();
+
         Debug.Log("Ground Slam Impact!");
+
+        sfxManager.PlayPlayerGroundSlamEmitter();
 
         Collider2D[] centerHits = Physics2D.OverlapCircleAll(transform.position, 0.6f);
         foreach (Collider2D hit in centerHits)
