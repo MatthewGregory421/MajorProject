@@ -3,6 +3,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private PlayerCombat combat;
+    public PlayerSFXManager sfxManager;
 
     [SerializeField] private LayerMask enemyLayer;
     [SerializeField] private LayerMask obsticleLayer;
@@ -22,7 +23,6 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask groundLayer;
 
     public Rigidbody2D rb;
-    public FMODUnity.StudioEventEmitter dashEmitter;
     private float moveInput;
     public bool isGrounded;
 
@@ -77,6 +77,7 @@ public class PlayerMovement : MonoBehaviour
 
         // Add this line:
         combat = GetComponent<PlayerCombat>();
+
 
         if (combat == null)
             Debug.LogError("PlayerCombat component not found on this GameObject!");
@@ -198,13 +199,13 @@ public class PlayerMovement : MonoBehaviour
             {
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
                 canDoubleJump = true;
-                GetComponent<FMODUnity.StudioEventEmitter>().Play();
+                sfxManager.PlayPlayerJumpEmitter();
             }
             else if (doubleJumpEnabled && canDoubleJump)
             {
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
                 canDoubleJump = false;
-                GetComponent<FMODUnity.StudioEventEmitter>().Play();
+                sfxManager.PlayPlayerJumpEmitter();
             }
         }
     }
@@ -328,7 +329,7 @@ public class PlayerMovement : MonoBehaviour
         dashDirection = lookHorizontal;
 
         rb.gravityScale = 0f; // optional freeze gravity
-        dashEmitter.Play();
+        sfxManager.PlayPlayerDashEmitter();
     }
 
     void EndDash()

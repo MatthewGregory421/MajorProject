@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 7460366393225161041}
   - component: {fileID: 2536271671917198698}
   - component: {fileID: 8751708677010052850}
-  - component: {fileID: 6938584701886813832}
   - component: {fileID: 8378545687140109909}
+  - component: {fileID: 4684058078858038102}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nonRigidbodyVelocity: 0
   attenuationObject: {fileID: 0}
---- !u!114 &6938584701886813832
+--- !u!114 &8378545687140109909
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -154,23 +154,36 @@ MonoBehaviour:
   m_GameObject: {fileID: 654247038261356956}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9468c5f457ace64f8d4df6d642b107f, type: 3}
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LoadEvent: 7
-  UnloadEvent: 8
-  Banks:
-  - Music
   CollisionTag: 
-  PreloadSamples: 0
---- !u!114 &8378545687140109909
+  EventReference:
+    Guid:
+      Data1: -486788689
+      Data2: 1298379568
+      Data3: 2004485553
+      Data4: 879487636
+    Path: event:/oH/AlloH
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &4684058078858038102
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 654247038261356956}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
@@ -178,23 +191,19 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: -1601005388
-      Data2: 1124734198
-      Data3: -949778816
-      Data4: -1250576952
-    Path: event:/Music
+      Data1: 194052085
+      Data2: 1162380492
+      Data3: -269079144
+      Data4: -606036715
+    Path: event:/oH/uH
   Event: 
   EventPlayTrigger: 0
   EventStopTrigger: 0
-  AllowFadeout: 0
+  AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
   NonRigidbodyVelocity: 0
-  Params:
-  - Name: MusHo
-    Value: 1
-  - Name: MusTH
-    Value: 1
+  Params: []
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
@@ -244,6 +253,9 @@ GameObject:
   - component: {fileID: 3784092782399151445}
   - component: {fileID: 8065912862418450713}
   - component: {fileID: 4863651225202473930}
+  - component: {fileID: 1777247237563679165}
+  - component: {fileID: 8741889527807038898}
+  - component: {fileID: 5341291735418138264}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -400,6 +412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c45be8b7b1648c40b15b5dc63c58bba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sfxManager: {fileID: 0}
   enemyLayer:
     serializedVersion: 2
     m_Bits: 256
@@ -448,6 +461,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af85c062d152ddd4c88ef755e048b918, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sfxManager: {fileID: 0}
   attackCooldown: 0.5
   attackPrefab: {fileID: 1816806945556153040, guid: b61a767816ceba94d803b37d50eb1617, type: 3}
   attackDistance: 1.5
@@ -469,10 +483,104 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fefdead0c17db746a237c3e2fb891f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathManager: {fileID: 0}
   maxHealth: 5
   currentHealth: 0
   knockbackForce: 5
   flashDuration: 0.2
+--- !u!114 &1777247237563679165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4236868100596145591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 2020033865
+      Data2: 1290651965
+      Data3: -752876139
+      Data4: 1935275552
+    Path: event:/Player/Player Movement/Jump 1
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &8741889527807038898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4236868100596145591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1349447606
+      Data2: 1107665140
+      Data3: 728178323
+      Data4: 1654581448
+    Path: event:/Player/Player Movement/Dash/Dash
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &5341291735418138264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4236868100596145591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1476103071
+      Data2: 1226367931
+      Data3: 2098472082
+      Data4: 1541052793
+    Path: event:/Player/Player Attack/Player attack
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &6188277399777524310
 GameObject:
   m_ObjectHideFlags: 0
