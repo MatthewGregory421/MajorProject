@@ -42,7 +42,7 @@ MonoBehaviour:
   Path: FMODAssets/CIM316.2_Shared FMod_Howard_1030726_300326/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639105606426005172
+  lastModified: 639109074829218096
   FileSizes:
   - Name: Desktop
     Value: 1074
@@ -101,7 +101,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 116308
---- !u!114 &-8212558533196864461
+--- !u!114 &-8366587091879447305
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -111,23 +111,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Enemy/Movement/foosteps 1
+  m_Name: event:/Enemy/SAD/Sad Attack
   m_EditorClassIdentifier: 
-  Path: event:/Enemy/Movement/foosteps 1
+  Path: event:/Enemy/SAD/Sad Attack
   Guid:
-    Data1: -1545652532
-    Data2: 1110175595
-    Data3: 843215233
-    Data4: -1416489329
+    Data1: 1423960066
+    Data2: 1237188862
+    Data3: 84920766
+    Data4: 889630539
   Banks:
   - {fileID: 84325918349447617}
   IsStream: 0
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 222
+  Length: 4000
 --- !u!114 &-8051382103866542684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,6 +182,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 44347
+--- !u!114 &-7372861320072033437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enemy/SAD/Sad Impact
+  m_EditorClassIdentifier: 
+  Path: event:/Enemy/SAD/Sad Impact
+  Guid:
+    Data1: 1385294322
+    Data2: 1271398606
+    Data3: 1608620161
+    Data4: 1363475163
+  Banks:
+  - {fileID: 84325918349447617}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2500
 --- !u!114 &-7307293485275557651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,7 +224,7 @@ MonoBehaviour:
   Path: FMODAssets/CIM316.2_Shared FMod_Howard_1030726_300326/Build/Desktop/MusOH.bank
   Name: MusOH
   StudioPath: bank:/MusOH
-  lastModified: 639107329984766774
+  lastModified: 639107230857371982
   FileSizes:
   - Name: Desktop
     Value: 1579776
@@ -256,33 +283,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 44347
---- !u!114 &-6321654903023909390
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Player/Player Impact/player impact 5
-  m_EditorClassIdentifier: 
-  Path: event:/Player/Player Impact/player impact 5
-  Guid:
-    Data1: -961935779
-    Data2: 1084451683
-    Data3: 1088575927
-    Data4: 1894607097
-  Banks:
-  - {fileID: 84325918349447617}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 496
 --- !u!114 &-6309025400759084360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -310,60 +310,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 222
---- !u!114 &-5546511720558002141
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Enemy/ANGER/Anger iDLE 2
-  m_EditorClassIdentifier: 
-  Path: event:/Enemy/ANGER/Anger iDLE 2
-  Guid:
-    Data1: -1116060131
-    Data2: 1223678186
-    Data3: -307765371
-    Data4: -1188943948
-  Banks:
-  - {fileID: 84325918349447617}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 742
---- !u!114 &-5456961785722359024
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Player/Player Movement/Footsteps/Footsteps 4
-  m_EditorClassIdentifier: 
-  Path: event:/Player/Player Movement/Footsteps/Footsteps 4
-  Guid:
-    Data1: -679879022
-    Data2: 1113905294
-    Data3: -1569032573
-    Data4: -253491857
-  Banks:
-  - {fileID: 84325918349447617}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 148
 --- !u!114 &-5445150199373039896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -526,7 +472,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 465
---- !u!114 &-4442796452370715067
+--- !u!114 &-4433955367218704492
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -536,23 +482,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Player/Player Movement/Footsteps/Footsteps 3
+  m_Name: event:/Enemy/ANGER/Anger Impact
   m_EditorClassIdentifier: 
-  Path: event:/Player/Player Movement/Footsteps/Footsteps 3
+  Path: event:/Enemy/ANGER/Anger Impact
   Guid:
-    Data1: -529892520
-    Data2: 1190878812
-    Data3: -508927353
-    Data4: 356552810
+    Data1: 2025204657
+    Data2: 1204236771
+    Data3: -1455637088
+    Data4: 907380359
   Banks:
   - {fileID: 84325918349447617}
   IsStream: 0
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 148
+  Length: 2000
 --- !u!114 &-4109607132260909326
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -580,33 +526,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 44347
---- !u!114 &-3995276252315472081
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Enemy/SAD/sad impact 2
-  m_EditorClassIdentifier: 
-  Path: event:/Enemy/SAD/sad impact 2
-  Guid:
-    Data1: 1039716619
-    Data2: 1284456138
-    Data3: -1048100721
-    Data4: 1768698734
-  Banks:
-  - {fileID: 84325918349447617}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 445
 --- !u!114 &-3733016842042030820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -634,7 +553,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1187
---- !u!114 &-3379192358925952688
+--- !u!114 &-3525978281665543132
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -644,50 +563,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Enemy/ANGER/Anger impact 2
+  m_Name: event:/Enemy/ANGER/Anger Attack
   m_EditorClassIdentifier: 
-  Path: event:/Enemy/ANGER/Anger impact 2
+  Path: event:/Enemy/ANGER/Anger Attack
   Guid:
-    Data1: -1911877285
-    Data2: 1262605223
-    Data3: -89944945
-    Data4: 282198806
+    Data1: -1568125285
+    Data2: 1103035640
+    Data3: -1122099049
+    Data4: -1485064161
   Banks:
   - {fileID: 84325918349447617}
   IsStream: 0
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 291
---- !u!114 &-2965709227598981123
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Enemy/SAD/sad attack 1
-  m_EditorClassIdentifier: 
-  Path: event:/Enemy/SAD/sad attack 1
-  Guid:
-    Data1: 1049804796
-    Data2: 1208329162
-    Data3: -233099365
-    Data4: -22882209
-  Banks:
-  - {fileID: 84325918349447617}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 538
+  Length: 600
 --- !u!114 &-2941382300619206411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -715,6 +607,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 46956
+--- !u!114 &-2793894388797744668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enemy/ANGER/Anger Idle
+  m_EditorClassIdentifier: 
+  Path: event:/Enemy/ANGER/Anger Idle
+  Guid:
+    Data1: -559244495
+    Data2: 1336283244
+    Data3: -1703928678
+    Data4: 2137390737
+  Banks:
+  - {fileID: 84325918349447617}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5000
 --- !u!114 &-2723875786504646604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -757,7 +676,7 @@ MonoBehaviour:
   Path: FMODAssets/CIM316.2_Shared FMod_Howard_1030726_300326/Build/Desktop/MusOS.bank
   Name: MusOS
   StudioPath: bank:/MusOS
-  lastModified: 639107329984846789
+  lastModified: 639107230864775474
   FileSizes:
   - Name: Desktop
     Value: 1648256
@@ -789,60 +708,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 44347
---- !u!114 &-1177944525916787301
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Enemy/SAD/sad attack 2
-  m_EditorClassIdentifier: 
-  Path: event:/Enemy/SAD/sad attack 2
-  Guid:
-    Data1: 378247842
-    Data2: 1285870665
-    Data3: -199551614
-    Data4: -1235149483
-  Banks:
-  - {fileID: 84325918349447617}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 296
---- !u!114 &-1079808002659607504
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Enemy/Movement/foosteps 3
-  m_EditorClassIdentifier: 
-  Path: event:/Enemy/Movement/foosteps 3
-  Guid:
-    Data1: 812389637
-    Data2: 1289234036
-    Data3: -1916520310
-    Data4: 35230509
-  Banks:
-  - {fileID: 84325918349447617}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 185
 --- !u!114 &-1011477529345955170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -870,7 +735,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 44347
---- !u!114 &-972303743738173889
+--- !u!114 &-922340310781362492
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -880,23 +745,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Player/Player Impact/player impact 3
+  m_Name: event:/Player/Player Impact/PlayerImpact
   m_EditorClassIdentifier: 
-  Path: event:/Player/Player Impact/player impact 3
+  Path: event:/Player/Player Impact/PlayerImpact
   Guid:
-    Data1: 1522121689
-    Data2: 1108290526
-    Data3: 1597535122
-    Data4: 745968004
+    Data1: -577155329
+    Data2: 1263636919
+    Data3: -1950885491
+    Data4: 1868236492
   Banks:
   - {fileID: 84325918349447617}
   IsStream: 0
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 496
+  Length: 2000
 --- !u!114 &-788237362343343801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -923,7 +788,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 816
+  Length: 500
 --- !u!114 &-407406889354335742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -951,33 +816,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 393
---- !u!114 &-142778981704210281
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Enemy/SAD/sad idle 2
-  m_EditorClassIdentifier: 
-  Path: event:/Enemy/SAD/sad idle 2
-  Guid:
-    Data1: 1968945507
-    Data2: 1122966093
-    Data3: 762749858
-    Data4: 794540725
-  Banks:
-  - {fileID: 84325918349447617}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 593
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1011,58 +849,41 @@ MonoBehaviour:
   - {fileID: 4905942784906884747}
   - {fileID: -1011477529345955170}
   - {fileID: -5273287026860376736}
-  - {fileID: 648898701159755172}
   - {fileID: -8509918345846126675}
-  - {fileID: -1079808002659607504}
   - {fileID: -8840436176220477792}
-  - {fileID: -3995276252315472081}
-  - {fileID: 5342731976450493170}
   - {fileID: -4878761255987376474}
-  - {fileID: -5546511720558002141}
   - {fileID: -788237362343343801}
-  - {fileID: 4775405240820805224}
   - {fileID: -4590241497138777669}
   - {fileID: -8580810495042752791}
-  - {fileID: -4442796452370715067}
-  - {fileID: -3379192358925952688}
-  - {fileID: -6321654903023909390}
-  - {fileID: -142778981704210281}
-  - {fileID: 5208575275141668959}
   - {fileID: -7042252902143061528}
-  - {fileID: 5540493435470583440}
   - {fileID: -407406889354335742}
   - {fileID: -6309025400759084360}
-  - {fileID: 6687241312462985719}
   - {fileID: 8653472027318248393}
   - {fileID: 5007749217787079882}
-  - {fileID: -5456961785722359024}
-  - {fileID: 8958152169772092793}
-  - {fileID: 3146744833025158429}
-  - {fileID: -1177944525916787301}
   - {fileID: -2723875786504646604}
   - {fileID: -4928512693562111352}
-  - {fileID: 4600622914125685522}
   - {fileID: -8051382103866542684}
   - {fileID: 8761873653249171943}
-  - {fileID: 1618141295772744511}
-  - {fileID: 180761550618659806}
-  - {fileID: -8212558533196864461}
-  - {fileID: -972303743738173889}
-  - {fileID: 7989787229239859931}
-  - {fileID: 2635407030082172659}
   - {fileID: -3733016842042030820}
   - {fileID: -5028723936165351685}
-  - {fileID: 6873120048250040399}
-  - {fileID: -2965709227598981123}
   - {fileID: 4364227577566358772}
   - {fileID: 7299074084636901094}
+  - {fileID: 5900597703026571759}
+  - {fileID: -922340310781362492}
+  - {fileID: -8366587091879447305}
+  - {fileID: -2793894388797744668}
+  - {fileID: -3525978281665543132}
+  - {fileID: -4433955367218704492}
+  - {fileID: 7836074107509008020}
+  - {fileID: 3358152127574715949}
+  - {fileID: -7372861320072033437}
   EditorParameters: []
   MasterBanks:
   - {fileID: -8825886483869512796}
   StringsBanks:
   - {fileID: 8999953657572529065}
   cacheVersion: 131858
-  cacheTime: 639107329985116846
+  cacheTime: 639109199861175933
   SerializableEventsDict:
   - key: event:/oA/uA
     index: 0
@@ -1090,96 +911,62 @@ MonoBehaviour:
     index: 11
   - key: event:/oS/uS
     index: 12
-  - key: event:/Enemy/ANGER/Anger impact 1
-    index: 13
   - key: event:/Ambience/ambience anger
-    index: 14
-  - key: event:/Enemy/Movement/foosteps 3
-    index: 15
+    index: 13
   - key: event:/UI/back
-    index: 16
-  - key: event:/Enemy/SAD/sad impact 2
-    index: 17
-  - key: event:/Player/Player Impact/player impact 4
-    index: 18
+    index: 14
   - key: event:/Player/Abilities/Shield/Shield impact 2
-    index: 19
-  - key: event:/Enemy/ANGER/Anger iDLE 2
-    index: 20
+    index: 15
   - key: event:/Player/Abilities/Ground slam
-    index: 21
-  - key: event:/Player/Player Movement/Footsteps/Footsteps 2
-    index: 22
+    index: 16
   - key: event:/UI/confirm
-    index: 23
+    index: 17
   - key: event:/Player/Player Movement/Jump 1
-    index: 24
-  - key: event:/Player/Player Movement/Footsteps/Footsteps 3
-    index: 25
-  - key: event:/Enemy/ANGER/Anger impact 2
-    index: 26
-  - key: event:/Player/Player Impact/player impact 5
-    index: 27
-  - key: event:/Enemy/SAD/sad idle 2
-    index: 28
-  - key: event:/Enemy/ANGER/Anger attack 2
-    index: 29
+    index: 18
   - key: event:/Ambience/ambience Sadness
-    index: 30
-  - key: event:/Player/Player Movement/Footsteps/Footsteps 1
-    index: 31
+    index: 19
   - key: event:/Player/Abilities/Shield/Shield impact 3
-    index: 32
+    index: 20
   - key: event:/UI/close - back menu
-    index: 33
-  - key: event:/Enemy/Movement/foosteps 4
-    index: 34
+    index: 21
   - key: event:/Player/Abilities/Shield/Shield impact 1
-    index: 35
+    index: 22
   - key: event:/Player/Abilities/Shield/Shield deactivate 2
-    index: 36
-  - key: event:/Player/Player Movement/Footsteps/Footsteps 4
-    index: 37
-  - key: event:/Player/Player Impact/player impact 6
-    index: 38
-  - key: event:/Player/Player Impact/player impact 2
-    index: 39
-  - key: event:/Enemy/SAD/sad attack 2
-    index: 40
+    index: 23
   - key: event:/Player/Abilities/Shield/Shield activate 2
-    index: 41
+    index: 24
   - key: event:/UI/forward
-    index: 42
-  - key: event:/Enemy/SAD/sad idle 1
-    index: 43
+    index: 25
   - key: event:/Player/Abilities/Shield/Shield activate
-    index: 44
+    index: 26
   - key: event:/UI/Open Menu
-    index: 45
-  - key: event:/Enemy/SAD/sad impact 1
-    index: 46
-  - key: event:/Enemy/Movement/foosteps 2
-    index: 47
-  - key: event:/Enemy/Movement/foosteps 1
-    index: 48
-  - key: event:/Player/Player Impact/player impact 3
-    index: 49
-  - key: event:/Enemy/ANGER/Anger iDLE 1
-    index: 50
-  - key: event:/Enemy/ANGER/Anger attack 1
-    index: 51
+    index: 27
   - key: event:/Player/Abilities/Shield/Shield deactivate 1
-    index: 52
+    index: 28
   - key: event:/Ambience/ambience hub
-    index: 53
-  - key: event:/Player/Player Impact/player impact 1
-    index: 54
-  - key: event:/Enemy/SAD/sad attack 1
-    index: 55
+    index: 29
   - key: event:/Player/Player Movement/Dash/Dash
-    index: 56
+    index: 30
   - key: event:/Player/Player Attack/Player attack
-    index: 57
+    index: 31
+  - key: event:/Player/Player Movement/Footsteps/Footsteps
+    index: 32
+  - key: event:/Player/Player Impact/PlayerImpact
+    index: 33
+  - key: event:/Enemy/SAD/Sad Attack
+    index: 34
+  - key: event:/Enemy/ANGER/Anger Idle
+    index: 35
+  - key: event:/Enemy/ANGER/Anger Attack
+    index: 36
+  - key: event:/Enemy/ANGER/Anger Impact
+    index: 37
+  - key: event:/Enemy/SAD/Sad Idle
+    index: 38
+  - key: event:/Enemy/Movement/EnemyFootsteps
+    index: 39
+  - key: event:/Enemy/SAD/Sad Impact
+    index: 40
 --- !u!114 &84325918349447617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1195,92 +982,11 @@ MonoBehaviour:
   Path: FMODAssets/CIM316.2_Shared FMod_Howard_1030726_300326/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639107329985116846
+  lastModified: 639109199861175933
   FileSizes:
   - Name: Desktop
-    Value: 3676096
+    Value: 3659776
   Exists: 1
---- !u!114 &180761550618659806
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Enemy/Movement/foosteps 2
-  m_EditorClassIdentifier: 
-  Path: event:/Enemy/Movement/foosteps 2
-  Guid:
-    Data1: -512881462
-    Data2: 1159341404
-    Data3: 944363155
-    Data4: -1649167082
-  Banks:
-  - {fileID: 84325918349447617}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 165
---- !u!114 &648898701159755172
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Enemy/ANGER/Anger impact 1
-  m_EditorClassIdentifier: 
-  Path: event:/Enemy/ANGER/Anger impact 1
-  Guid:
-    Data1: 1157426176
-    Data2: 1127783687
-    Data3: -1779069785
-    Data4: 1366777206
-  Banks:
-  - {fileID: 84325918349447617}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 291
---- !u!114 &1618141295772744511
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Enemy/SAD/sad impact 1
-  m_EditorClassIdentifier: 
-  Path: event:/Enemy/SAD/sad impact 1
-  Guid:
-    Data1: -761968184
-    Data2: 1191451178
-    Data3: 181198508
-    Data4: -1968351219
-  Banks:
-  - {fileID: 84325918349447617}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 371
 --- !u!114 &1834705338827202468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1308,7 +1014,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 44347
---- !u!114 &2635407030082172659
+--- !u!114 &3358152127574715949
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1318,50 +1024,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Enemy/ANGER/Anger attack 1
+  m_Name: event:/Enemy/Movement/EnemyFootsteps
   m_EditorClassIdentifier: 
-  Path: event:/Enemy/ANGER/Anger attack 1
+  Path: event:/Enemy/Movement/EnemyFootsteps
   Guid:
-    Data1: 1154005733
-    Data2: 1270569942
-    Data3: -2094500467
-    Data4: -2015455441
+    Data1: 1409074673
+    Data2: 1218063318
+    Data3: -232773997
+    Data4: -725390234
   Banks:
   - {fileID: 84325918349447617}
   IsStream: 0
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 519
---- !u!114 &3146744833025158429
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Player/Player Impact/player impact 2
-  m_EditorClassIdentifier: 
-  Path: event:/Player/Player Impact/player impact 2
-  Guid:
-    Data1: 2117719453
-    Data2: 1102299821
-    Data3: -1349769841
-    Data4: 1575062936
-  Banks:
-  - {fileID: 84325918349447617}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 296
+  Length: 2000
 --- !u!114 &3570549747531098725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1404,7 +1083,7 @@ MonoBehaviour:
   Path: FMODAssets/CIM316.2_Shared FMod_Howard_1030726_300326/Build/Desktop/MusOA.bank
   Name: MusOA
   StudioPath: bank:/MusOA
-  lastModified: 639107329984576743
+  lastModified: 639107230850719770
   FileSizes:
   - Name: Desktop
     Value: 1628512
@@ -1436,60 +1115,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 13000
---- !u!114 &4600622914125685522
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Enemy/SAD/sad idle 1
-  m_EditorClassIdentifier: 
-  Path: event:/Enemy/SAD/sad idle 1
-  Guid:
-    Data1: 1705570737
-    Data2: 1177064237
-    Data3: 1234063532
-    Data4: 1278288900
-  Banks:
-  - {fileID: 84325918349447617}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 1319
---- !u!114 &4775405240820805224
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Player/Player Movement/Footsteps/Footsteps 2
-  m_EditorClassIdentifier: 
-  Path: event:/Player/Player Movement/Footsteps/Footsteps 2
-  Guid:
-    Data1: 2087526707
-    Data2: 1100656697
-    Data3: -1404361592
-    Data4: -2021538377
-  Banks:
-  - {fileID: 84325918349447617}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 148
 --- !u!114 &4858668996924768770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1571,7 +1196,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 593
---- !u!114 &5208575275141668959
+--- !u!114 &5900597703026571759
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1581,131 +1206,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Enemy/ANGER/Anger attack 2
+  m_Name: event:/Player/Player Movement/Footsteps/Footsteps
   m_EditorClassIdentifier: 
-  Path: event:/Enemy/ANGER/Anger attack 2
+  Path: event:/Player/Player Movement/Footsteps/Footsteps
   Guid:
-    Data1: -764828313
-    Data2: 1104624769
-    Data3: -1465017722
-    Data4: -175653611
+    Data1: 1105432208
+    Data2: 1163498110
+    Data3: -1887795055
+    Data4: -1948516884
   Banks:
   - {fileID: 84325918349447617}
   IsStream: 0
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 519
---- !u!114 &5342731976450493170
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Player/Player Impact/player impact 4
-  m_EditorClassIdentifier: 
-  Path: event:/Player/Player Impact/player impact 4
-  Guid:
-    Data1: -1609562348
-    Data2: 1167982988
-    Data3: -1978096970
-    Data4: -1483440822
-  Banks:
-  - {fileID: 84325918349447617}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 407
---- !u!114 &5540493435470583440
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Player/Player Movement/Footsteps/Footsteps 1
-  m_EditorClassIdentifier: 
-  Path: event:/Player/Player Movement/Footsteps/Footsteps 1
-  Guid:
-    Data1: 239191421
-    Data2: 1114721654
-    Data3: -700018557
-    Data4: -1949483398
-  Banks:
-  - {fileID: 84325918349447617}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 148
---- !u!114 &6687241312462985719
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Enemy/Movement/foosteps 4
-  m_EditorClassIdentifier: 
-  Path: event:/Enemy/Movement/foosteps 4
-  Guid:
-    Data1: -927868275
-    Data2: 1165271223
-    Data3: -1958317667
-    Data4: -1511439984
-  Banks:
-  - {fileID: 84325918349447617}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 156
---- !u!114 &6873120048250040399
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Player/Player Impact/player impact 1
-  m_EditorClassIdentifier: 
-  Path: event:/Player/Player Impact/player impact 1
-  Guid:
-    Data1: -1371151877
-    Data2: 1216700889
-    Data3: 735070358
-    Data4: 1616073108
-  Banks:
-  - {fileID: 84325918349447617}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 482
+  Length: 4000
 --- !u!114 &7299074084636901094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1733,7 +1250,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 3000
---- !u!114 &7989787229239859931
+--- !u!114 &7836074107509008020
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1743,23 +1260,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Enemy/ANGER/Anger iDLE 1
+  m_Name: event:/Enemy/SAD/Sad Idle
   m_EditorClassIdentifier: 
-  Path: event:/Enemy/ANGER/Anger iDLE 1
+  Path: event:/Enemy/SAD/Sad Idle
   Guid:
-    Data1: -94523168
-    Data2: 1249347115
-    Data3: -508825950
-    Data4: -928319815
+    Data1: 1217957844
+    Data2: 1080648591
+    Data3: 751318406
+    Data4: -1313519116
   Banks:
   - {fileID: 84325918349447617}
   IsStream: 0
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 742
+  Length: 1700
 --- !u!114 &8653472027318248393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1841,33 +1358,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 44347
---- !u!114 &8958152169772092793
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Player/Player Impact/player impact 6
-  m_EditorClassIdentifier: 
-  Path: event:/Player/Player Impact/player impact 6
-  Guid:
-    Data1: 1861362330
-    Data2: 1260196990
-    Data3: 535193243
-    Data4: 1356341945
-  Banks:
-  - {fileID: 84325918349447617}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 570
 --- !u!114 &8999953657572529065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1883,8 +1373,8 @@ MonoBehaviour:
   Path: FMODAssets/CIM316.2_Shared FMod_Howard_1030726_300326/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639107329984396704
+  lastModified: 639109074829238130
   FileSizes:
   - Name: Desktop
-    Value: 3698
+    Value: 3034
   Exists: 1

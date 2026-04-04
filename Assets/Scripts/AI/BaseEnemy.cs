@@ -1,7 +1,10 @@
 using UnityEngine;
+using FMODUnity;
 
 public class BaseEnemy : MonoBehaviour
 {
+    public SadnessSFXManager sfxManager;
+
     [Header("Stats")]
     public int maxHealth = 3;
     public int damage = 1;
@@ -27,6 +30,7 @@ public class BaseEnemy : MonoBehaviour
 
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
+        sfxManager.RegisterEnemy(rb, moveSpeed);
         if (sr != null)
             originalColor = sr.color;
 
@@ -52,6 +56,7 @@ public class BaseEnemy : MonoBehaviour
     public void TakeDamage(int dmg, Vector2 knockbackDirection)
     {
         currentHealth -= dmg;
+        sfxManager.PlayEnemyHitEmitter();
 
         // Knockback
         if (rb != null)

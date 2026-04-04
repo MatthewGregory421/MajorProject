@@ -1,8 +1,11 @@
 using UnityEngine;
+using FMODUnity;
+
 
 public class PlayerHealth : MonoBehaviour
 {
     public DeathManager deathManager;
+    public PlayerSFXManager sfxManager;
 
     [Header("Health")]
     public int maxHealth = 5;
@@ -37,6 +40,7 @@ public class PlayerHealth : MonoBehaviour
     public void TakeDamage(int damage, Vector2 knockbackDirection)
     {
         currentHealth -= damage;
+        sfxManager.PlayPlayerHitEmitter();
         Debug.Log("Player took damage! HP: " + currentHealth);
 
         Knockback(knockbackDirection, knockbackForce, 1f); // default duration multiplier

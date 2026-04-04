@@ -1,4 +1,5 @@
 using UnityEngine;
+using FMODUnity;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -11,6 +12,14 @@ public class PlayerMovement : MonoBehaviour
     [Header("Movement Settings")]
     public float moveSpeed = 5f;
     public float jumpForce = 10f;
+
+    [Header("Footsteps")]
+    public StudioEventEmitter footstepEmitter;
+
+    public float minStepInterval = 0.5f;
+    public float maxStepInterval = 0.25f;
+
+    private float stepTimer;
 
     [Header("Double Jump Settings")]
     public bool doubleJumpEnabled = true; // toggle in inspector
@@ -90,6 +99,7 @@ public class PlayerMovement : MonoBehaviour
         HandleLookDirection();
         CheckGrounded();
         HandleDash();
+        HandleFootsteps();
     }
 
     private void FixedUpdate()
@@ -122,6 +132,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         rb.linearVelocity = velocity;
+        
 
         // Apply ground slam downward force
         if (isGroundSlamming)
@@ -141,6 +152,27 @@ public class PlayerMovement : MonoBehaviour
         else if (Input.GetKey(KeyCode.RightArrow))
         {
             moveInput = 1f;
+        }
+    }
+
+    void HandleFootsteps()
+    {
+        float currentSpeed = Mathf.Abs(rb.linearVelocity.x);
+        float speedPercent = Mathf.Clamp01(currentSpeed / moveSpeed);
+        float currentStepInterval = Mathf.Lerp(minStepInterval, maxStepInterval, speedPercent);
+
+        if (currentSpeed > 0.1f && isGrounded && !isDashing)
+        {
+            stepTimer -= Time.deltaTime;
+            if (stepTimer <= 0f)
+            {
+                footstepEmitter.Play();
+                stepTimer = currentStepInterval;
+            }
+        }
+        else
+        {
+            stepTimer = 0f;
         }
     }
 

@@ -15,6 +15,8 @@ public class PlayerSFXManager : MonoBehaviour
     public StudioEventEmitter PlayerJump;
     public StudioEventEmitter PlayerAttack;
     public StudioEventEmitter PlayerGroundSlam;
+    public StudioEventEmitter PlayerFootstep;
+    public StudioEventEmitter PlayerHit;
 
 
     // For Josh, this is the section you need.
@@ -44,6 +46,14 @@ public class PlayerSFXManager : MonoBehaviour
     public void PlayPlayerGroundSlamEmitter()
     {
         PlayerGroundSlam.Play();
+    }
+    public void PlayPlayerFootstepEmitter()
+    {
+        PlayerFootstep.Play();
+    }
+    public void PlayPlayerHitEmitter()
+    {
+        PlayerHit.Play();
     }
 }
 //Copy from this line up

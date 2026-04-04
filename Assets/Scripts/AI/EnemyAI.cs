@@ -4,6 +4,7 @@ public class EnemyAI : MonoBehaviour
 {
     private BaseEnemy baseEnemy;
     private RandomBehaviorAttack attack;
+    public SadnessSFXManager sadnessSFXManager;
 
     [Header("Detection")]
     public float detectionRange = 6f;
@@ -114,6 +115,9 @@ public class EnemyAI : MonoBehaviour
         }
 
         baseEnemy.SetVelocity(new Vector2(dir * roamSpeed, baseEnemy.rb.linearVelocity.y));
+
+        sadnessSFXManager.PlayEnemyIdleEmitter();
+        
     }
 
     // =========================
@@ -153,6 +157,7 @@ public class EnemyAI : MonoBehaviour
         velocity += separation * 2f;
 
         baseEnemy.SetVelocity(velocity);
+        
     }
 
     // =========================
