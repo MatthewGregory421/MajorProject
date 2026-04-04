@@ -4,6 +4,7 @@ using System.Collections.Generic;
 public class PlayerCombat : MonoBehaviour
 {
     private PlayerMovement movement;
+    public PlayerSFXManager sfxManager;
 
     [Header("Attack Settings")]
     public float attackCooldown = 0.3f;
@@ -56,6 +57,7 @@ public class PlayerCombat : MonoBehaviour
         {
             enemiesHit.Clear();
             movement.isGroundSlamming = true;
+            sfxManager.PlayPlayerGroundSlamEmitter();
             movement.rb.linearVelocity = Vector2.zero;
             movement.SetEnemyCollision(false);
             attackTimer = attackCooldown;
@@ -91,6 +93,8 @@ public class PlayerCombat : MonoBehaviour
         Vector3 spawnPos = transform.position + (Vector3)(dir * attackDistance);
         GameObject indicator = Instantiate(attackPrefab, spawnPos, Quaternion.identity);
         Destroy(indicator, 0.5f);
+
+        sfxManager.PlayPlayerAttackEmitter();
 
         // Damage check
         Collider2D[] hits = Physics2D.OverlapCircleAll(spawnPos, 0.5f);
@@ -129,6 +133,8 @@ public class PlayerCombat : MonoBehaviour
 
     public void SpawnGroundSlamIndicators()
     {
+        GroundSlam();
+
         Debug.Log("Ground Slam Impact!");
 
         Collider2D[] centerHits = Physics2D.OverlapCircleAll(transform.position, 0.6f);

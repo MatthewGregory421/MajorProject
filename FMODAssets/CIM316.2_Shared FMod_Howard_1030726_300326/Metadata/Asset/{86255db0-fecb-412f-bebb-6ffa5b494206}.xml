@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="EncodableAsset" id="{86255db0-fecb-412f-bebb-6ffa5b494206}">
+		<property name="assetPath">
+			<value>2603_FMod Musical Asset Folder_HOWARD_1030726/Without Full Mix Buss_Midi Straight to Export/oH/AoH/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{b2a06b5f-82be-4802-9a08-04b372cb9a4e}</destination>
+		</relationship>
+	</object>
+</objects>

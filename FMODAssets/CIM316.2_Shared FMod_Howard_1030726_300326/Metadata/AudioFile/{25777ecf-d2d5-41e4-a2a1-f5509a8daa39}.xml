@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{25777ecf-d2d5-41e4-a2a1-f5509a8daa39}">
+		<property name="assetPath">
+			<value>2603_FMod Musical Asset Folder_HOWARD_1030726/Without Full Mix Buss_Midi Straight to Export/oA/SoA/Soa_4.1_2603_mO_mmO.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>10.434791666666667</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{b2a06b5f-82be-4802-9a08-04b372cb9a4e}</destination>
+		</relationship>
+	</object>
+</objects>
