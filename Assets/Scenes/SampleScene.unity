@@ -165,6 +165,79 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &65220404
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 952164276498025099, guid: d384081be3570584aaa336b143d44ad2, type: 3}
+      propertyPath: sadnessSFXManager
+      value: 
+      objectReference: {fileID: 1991409743}
+    - target: {fileID: 1261924528880323555, guid: d384081be3570584aaa336b143d44ad2, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 113152996}
+    - target: {fileID: 1261924528880323555, guid: d384081be3570584aaa336b143d44ad2, type: 3}
+      propertyPath: sfxManager
+      value: 
+      objectReference: {fileID: 1991409743}
+    - target: {fileID: 3808976309346146345, guid: d384081be3570584aaa336b143d44ad2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -26.165916
+      objectReference: {fileID: 0}
+    - target: {fileID: 3808976309346146345, guid: d384081be3570584aaa336b143d44ad2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.3805761
+      objectReference: {fileID: 0}
+    - target: {fileID: 3808976309346146345, guid: d384081be3570584aaa336b143d44ad2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3808976309346146345, guid: d384081be3570584aaa336b143d44ad2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3808976309346146345, guid: d384081be3570584aaa336b143d44ad2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3808976309346146345, guid: d384081be3570584aaa336b143d44ad2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3808976309346146345, guid: d384081be3570584aaa336b143d44ad2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3808976309346146345, guid: d384081be3570584aaa336b143d44ad2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3808976309346146345, guid: d384081be3570584aaa336b143d44ad2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3808976309346146345, guid: d384081be3570584aaa336b143d44ad2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5220074403284776744, guid: d384081be3570584aaa336b143d44ad2, type: 3}
+      propertyPath: m_Name
+      value: Sadness1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9124789989768657686, guid: d384081be3570584aaa336b143d44ad2, type: 3}
+      propertyPath: sadnessSFXManager
+      value: 
+      objectReference: {fileID: 1991409743}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d384081be3570584aaa336b143d44ad2, type: 3}
 --- !u!1 &79067158
 GameObject:
   m_ObjectHideFlags: 0
@@ -630,6 +703,68 @@ MonoBehaviour:
       Data3: 540918691
       Data4: -697333777
     Path: event:/Player/Abilities/Ground slam
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &449535570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 449535553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1105432208
+      Data2: 1163498110
+      Data3: -1887795055
+      Data4: -1948516884
+    Path: event:/Player/Player Movement/Footsteps/Footsteps
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &449535571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 449535553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -577155329
+      Data2: 1263636919
+      Data3: -1950885491
+      Data4: 1868236492
+    Path: event:/Player/Player Impact/PlayerImpact
   Event: 
   EventPlayTrigger: 0
   EventStopTrigger: 0
@@ -1217,63 +1352,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &916340957
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3808976309346146345, guid: d384081be3570584aaa336b143d44ad2, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -26.920689
-      objectReference: {fileID: 0}
-    - target: {fileID: 3808976309346146345, guid: d384081be3570584aaa336b143d44ad2, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.64
-      objectReference: {fileID: 0}
-    - target: {fileID: 3808976309346146345, guid: d384081be3570584aaa336b143d44ad2, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3808976309346146345, guid: d384081be3570584aaa336b143d44ad2, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3808976309346146345, guid: d384081be3570584aaa336b143d44ad2, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3808976309346146345, guid: d384081be3570584aaa336b143d44ad2, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3808976309346146345, guid: d384081be3570584aaa336b143d44ad2, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3808976309346146345, guid: d384081be3570584aaa336b143d44ad2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3808976309346146345, guid: d384081be3570584aaa336b143d44ad2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3808976309346146345, guid: d384081be3570584aaa336b143d44ad2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5220074403284776744, guid: d384081be3570584aaa336b143d44ad2, type: 3}
-      propertyPath: m_Name
-      value: Sadness1 (1)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d384081be3570584aaa336b143d44ad2, type: 3}
 --- !u!1 &999458730
 GameObject:
   m_ObjectHideFlags: 0
@@ -1408,6 +1486,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!114 &999634657 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1465102144632170632, guid: d384081be3570584aaa336b143d44ad2, type: 3}
+  m_PrefabInstance: {fileID: 279621217142502674}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &999634658 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7662271215101251480, guid: d384081be3570584aaa336b143d44ad2, type: 3}
+  m_PrefabInstance: {fileID: 279621217142502674}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &999634659 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7026825025633983837, guid: d384081be3570584aaa336b143d44ad2, type: 3}
+  m_PrefabInstance: {fileID: 279621217142502674}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &999634660 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1681034550127892480, guid: d384081be3570584aaa336b143d44ad2, type: 3}
+  m_PrefabInstance: {fileID: 279621217142502674}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1209865839
 GameObject:
   m_ObjectHideFlags: 0
@@ -3053,6 +3175,8 @@ MonoBehaviour:
   PlayerJump: {fileID: 449535554}
   PlayerAttack: {fileID: 449535562}
   PlayerGroundSlam: {fileID: 449535569}
+  PlayerFootstep: {fileID: 449535570}
+  PlayerHit: {fileID: 449535571}
 --- !u!114 &1991409743
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3060,12 +3184,18 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1991409734}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 52aef7d9464ea4347826a857cb10842d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sadnessAttack: {fileID: 0}
+  sadnessAttack: {fileID: 999634658}
+  EnemyHit: {fileID: 999634657}
+  EnemyIdle: {fileID: 999634659}
+  footstepEmitter: {fileID: 999634660}
+  idleCooldown: 8
+  minStepInterval: 0.5
+  maxStepInterval: 0.25
 --- !u!1 &1997316897
 GameObject:
   m_ObjectHideFlags: 0
@@ -3216,10 +3346,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 952164276498025099, guid: d384081be3570584aaa336b143d44ad2, type: 3}
+      propertyPath: sadnessSFXManager
+      value: 
+      objectReference: {fileID: 1991409743}
     - target: {fileID: 1261924528880323555, guid: d384081be3570584aaa336b143d44ad2, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 113152996}
+    - target: {fileID: 1261924528880323555, guid: d384081be3570584aaa336b143d44ad2, type: 3}
+      propertyPath: sfxManager
+      value: 
+      objectReference: {fileID: 1991409743}
     - target: {fileID: 3808976309346146345, guid: d384081be3570584aaa336b143d44ad2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.85
@@ -3264,6 +3402,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sadness1
       objectReference: {fileID: 0}
+    - target: {fileID: 9124789989768657686, guid: d384081be3570584aaa336b143d44ad2, type: 3}
+      propertyPath: sadnessSFXManager
+      value: 
+      objectReference: {fileID: 1991409743}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3321,10 +3463,18 @@ PrefabInstance:
       propertyPath: sfxManager
       value: 
       objectReference: {fileID: 1991409742}
+    - target: {fileID: 3784092782399151445, guid: ec21d75db2ae9435a8e8be4b756f0192, type: 3}
+      propertyPath: footstepEmitter
+      value: 
+      objectReference: {fileID: 449535570}
     - target: {fileID: 4236868100596145591, guid: ec21d75db2ae9435a8e8be4b756f0192, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4863651225202473930, guid: ec21d75db2ae9435a8e8be4b756f0192, type: 3}
+      propertyPath: sfxManager
+      value: 
+      objectReference: {fileID: 1991409742}
     - target: {fileID: 4863651225202473930, guid: ec21d75db2ae9435a8e8be4b756f0192, type: 3}
       propertyPath: deathManager
       value: 
@@ -3340,6 +3490,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4236868100596145591, guid: ec21d75db2ae9435a8e8be4b756f0192, type: 3}
       insertIndex: -1
       addedObject: {fileID: 449535569}
+    - targetCorrespondingSourceObject: {fileID: 4236868100596145591, guid: ec21d75db2ae9435a8e8be4b756f0192, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 449535570}
+    - targetCorrespondingSourceObject: {fileID: 4236868100596145591, guid: ec21d75db2ae9435a8e8be4b756f0192, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 449535571}
   m_SourcePrefab: {fileID: 100100000, guid: ec21d75db2ae9435a8e8be4b756f0192, type: 3}
 --- !u!114 &1972261277342243524 stripped
 MonoBehaviour:
@@ -3380,4 +3536,4 @@ SceneRoots:
   - {fileID: 10031897}
   - {fileID: 1563942491}
   - {fileID: 527369434}
-  - {fileID: 916340957}
+  - {fileID: 65220404}

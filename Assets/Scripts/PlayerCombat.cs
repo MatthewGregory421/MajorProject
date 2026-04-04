@@ -57,6 +57,7 @@ public class PlayerCombat : MonoBehaviour
         {
             enemiesHit.Clear();
             movement.isGroundSlamming = true;
+            sfxManager.PlayPlayerGroundSlamEmitter();
             movement.rb.linearVelocity = Vector2.zero;
             movement.SetEnemyCollision(false);
             attackTimer = attackCooldown;
@@ -135,8 +136,6 @@ public class PlayerCombat : MonoBehaviour
         GroundSlam();
 
         Debug.Log("Ground Slam Impact!");
-
-        sfxManager.PlayPlayerGroundSlamEmitter();
 
         Collider2D[] centerHits = Physics2D.OverlapCircleAll(transform.position, 0.6f);
         foreach (Collider2D hit in centerHits)
