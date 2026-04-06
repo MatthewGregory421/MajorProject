@@ -248,6 +248,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6905685002604708112}
   - component: {fileID: 5575079953397561157}
+  - component: {fileID: 1591302871427521838}
+  - component: {fileID: 6063915590889403080}
   m_Layer: 6
   m_Name: Playerbody
   m_TagString: Untagged
@@ -325,6 +327,44 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1591302871427521838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3855013799617557894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d6667cbc782adc469d0394197c9a21e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pCombat: {fileID: 8065912862418450713}
+  pMovement: {fileID: 3784092782399151445}
+  rb: {fileID: 2174007469622059135}
+  animator: {fileID: 6063915590889403080}
+--- !u!95 &6063915590889403080
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3855013799617557894}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 04f1608af06e29f489626a0bda963838, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4236868100596145591
 GameObject:
   m_ObjectHideFlags: 0
