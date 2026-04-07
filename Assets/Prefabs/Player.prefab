@@ -343,6 +343,8 @@ MonoBehaviour:
   pMovement: {fileID: 3784092782399151445}
   rb: {fileID: 2174007469622059135}
   animator: {fileID: 6063915590889403080}
+  lookdirection: 1
+  body: {fileID: 6905685002604708112}
 --- !u!95 &6063915590889403080
 Animator:
   serializedVersion: 7
