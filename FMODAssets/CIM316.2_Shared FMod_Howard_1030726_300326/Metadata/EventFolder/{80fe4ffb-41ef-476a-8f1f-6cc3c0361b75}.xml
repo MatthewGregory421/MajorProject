@@ -5,7 +5,7 @@
 			<value>oS</value>
 		</property>
 		<relationship name="folder">
-			<destination>{6976fe30-b6b1-46a4-9d06-dff63e294927}</destination>
+			<destination>{6c864bb5-dffe-4218-bff6-42083699ef64}</destination>
 		</relationship>
 	</object>
 </objects>
