@@ -5,6 +5,7 @@ public class SceneLoader : MonoBehaviour
 {
     public MusicManager musicManager;
     public GameObject menuPanel;
+    public UISFXManager uiSFXManager;
     private bool isPaused = false;
     public void LoadScene()
     {
@@ -19,6 +20,7 @@ public class SceneLoader : MonoBehaviour
             if (!isPaused)
             {
                 // Open menu and pause
+                uiSFXManager.PlayOpen();
                 menuPanel.SetActive(true);
                 Time.timeScale = 0f;
                 isPaused = true;
@@ -26,6 +28,7 @@ public class SceneLoader : MonoBehaviour
             else
             {
                 // Close menu and resume
+                uiSFXManager.PlayClose();
                 menuPanel.SetActive(false);
                 Time.timeScale = 1f;
                 isPaused = false;
@@ -34,7 +37,9 @@ public class SceneLoader : MonoBehaviour
     }
 
     public void ResumeGame()
+
     {
+        uiSFXManager.PlayClose();
         isPaused = false;
         menuPanel.SetActive(false);
         Time.timeScale = 1f;
