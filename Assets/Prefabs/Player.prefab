@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 2536271671917198698}
   - component: {fileID: 8751708677010052850}
   - component: {fileID: 8378545687140109909}
-  - component: {fileID: 4684058078858038102}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -160,48 +159,17 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: -486788689
-      Data2: 1298379568
-      Data3: 2004485553
-      Data4: 879487636
-    Path: event:/oH/AlloH
+      Data1: -709875834
+      Data2: 1129681821
+      Data3: 832103067
+      Data4: -1417449006
+    Path: event:/Music/Music Parent
   Event: 
   EventPlayTrigger: 0
   EventStopTrigger: 0
   AllowFadeout: 1
   TriggerOnce: 0
-  Preload: 0
-  NonRigidbodyVelocity: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
---- !u!114 &4684058078858038102
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 654247038261356956}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: 194052085
-      Data2: 1162380492
-      Data3: -269079144
-      Data4: -606036715
-    Path: event:/oH/uH
-  Event: 
-  EventPlayTrigger: 0
-  EventStopTrigger: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
+  Preload: 1
   NonRigidbodyVelocity: 0
   Params: []
   OverrideAttenuation: 0
@@ -385,6 +353,9 @@ GameObject:
   - component: {fileID: 1777247237563679165}
   - component: {fileID: 8741889527807038898}
   - component: {fileID: 5341291735418138264}
+  - component: {fileID: 3841691479207758795}
+  - component: {fileID: 3365635148039337455}
+  - component: {fileID: 7233407296383629896}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -551,7 +522,7 @@ MonoBehaviour:
     m_Bits: 384
   moveSpeed: 7
   jumpForce: 8
-  footstepEmitter: {fileID: 0}
+  footstepEmitter: {fileID: 3365635148039337455}
   minStepInterval: 0.5
   maxStepInterval: 0.25
   doubleJumpEnabled: 1
@@ -704,6 +675,99 @@ MonoBehaviour:
       Data3: 2098472082
       Data4: 1541052793
     Path: event:/Player/Player Attack/Player attack
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &3841691479207758795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4236868100596145591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1233360928
+      Data2: 1305442239
+      Data3: 540918691
+      Data4: -697333777
+    Path: event:/Player/Abilities/Ground slam
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &3365635148039337455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4236868100596145591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1105432208
+      Data2: 1163498110
+      Data3: -1887795055
+      Data4: -1948516884
+    Path: event:/Player/Player Movement/Footsteps/Footsteps
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &7233407296383629896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4236868100596145591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -577155329
+      Data2: 1263636919
+      Data3: -1950885491
+      Data4: 1868236492
+    Path: event:/Player/Player Impact/PlayerImpact
   Event: 
   EventPlayTrigger: 0
   EventStopTrigger: 0

@@ -261,9 +261,7 @@ MonoBehaviour:
   MasterBanks:
   - Master
   Banks:
-  - MusOA
-  - MusOH
-  - MusOS
+  - Music
   - SFX
   BanksToLoad:
   - Master.strings
