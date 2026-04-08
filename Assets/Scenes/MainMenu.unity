@@ -1413,7 +1413,6 @@ MonoBehaviour:
   mainMenuPanel: {fileID: 1320043145}
   optionsPanel: {fileID: 524552754}
   startButton: {fileID: 893282127}
-  optionsButton: {fileID: 1313674929}
   quitButton: {fileID: 531744530}
   masterVolumeSlider: {fileID: 2056557847}
   volumeText: {fileID: 477189165}
@@ -2271,7 +2270,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1313674926
 RectTransform:
   m_ObjectHideFlags: 0

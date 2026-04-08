@@ -12,7 +12,7 @@ public class MainMenu : MonoBehaviour
 
     [Header("Main Menu Buttons")]
     public Button startButton;
-    public Button optionsButton;
+   // public Button optionsButton;
     public Button quitButton;
 
     [Header("Options Menu UI")]
@@ -40,7 +40,7 @@ public class MainMenu : MonoBehaviour
 
     void Start()
     {
-        mainButtons = new Selectable[] { startButton, optionsButton, quitButton };
+        mainButtons = new Selectable[] { startButton, quitButton };
         optionButtons = new Selectable[] { masterVolumeSlider, fullscreenToggle, screenShakeToggle, backButton };
 
         // Load saved values
@@ -87,7 +87,7 @@ public class MainMenu : MonoBehaviour
             {
                 Button currentButton = mainButtons[currentIndex] as Button;
                 if (currentButton == startButton) StartGame();
-                else if (currentButton == optionsButton) ShowOptionsMenu();
+                //else if (currentButton == optionsButton) ShowOptionsMenu();
                 else if (currentButton == quitButton) QuitGame();
 
                 inputTimer = inputDelay;
@@ -202,7 +202,7 @@ public class MainMenu : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Sadness Proto");
     }
 
     public void QuitGame()
