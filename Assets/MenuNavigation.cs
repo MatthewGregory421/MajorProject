@@ -3,9 +3,16 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using FMODUnity;
 
 public class MainMenu : MonoBehaviour
 {
+    //hopefull this doesn't break shit
+
+    [Header("Music")]
+    public MusicManager musicManager;
+    public MenuMusicStarter musicStarter;
+
     [Header("Panels")]
     public GameObject mainMenuPanel;
     public GameObject optionsPanel;
@@ -202,7 +209,9 @@ public class MainMenu : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("Sadness Proto");
+        SceneManager.LoadScene("Hub Proto");
+        // hopefully this doesn't break shit
+        musicManager.StopMusEmitter();
     }
 
     public void QuitGame()
