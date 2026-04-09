@@ -12,6 +12,25 @@ public class SceneLoader : MonoBehaviour
         musicManager.StopMusEmitter();
         SceneManager.LoadScene("TestScene");
     }
+    // From Here is set up for later use once I fully flesh out the level design
+    public void GoToHubProto()
+    {
+        musicManager.StopMusEmitter();
+        SceneManager.LoadScene("Hub Proto");
+    }
+
+    public void GoToAngerProto()
+    {
+        musicManager.StopMusEmitter();
+        SceneManager.LoadScene("Anger Proto");
+    }
+
+    public void GoToSadnessProto()
+    {
+        musicManager.StopMusEmitter();
+        SceneManager.LoadScene("Sadness Proto");
+    }
+    // To Here
 
     void Update()
     {
@@ -50,6 +69,9 @@ public class SceneLoader : MonoBehaviour
     {
         // Make sure timeScale is reset before loading main menu
         Time.timeScale = 1f;
+
+        //Chucked this in cause otherwise we're going back to main menu without stopping the music
+        musicManager.StopMusEmitter();
 
         // Replace "MainMenuScene" with your actual main menu scene name
         SceneManager.LoadScene("MainMenu");
