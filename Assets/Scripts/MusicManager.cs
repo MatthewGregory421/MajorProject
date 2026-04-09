@@ -11,11 +11,9 @@ public class MusicManager : MonoBehaviour
 
 
     
-    private void Start()
+        public void PlayMusEmitter()
     {
-        //The line below is set up only for testing purposes it should be deleted and it's function handled elsewhere
-        RuntimeManager.StudioSystem.setParameterByName(musicSelect, 2);
-        Mus.Play();
+          Mus.Play();
     }
 
         public void StopMusEmitter()

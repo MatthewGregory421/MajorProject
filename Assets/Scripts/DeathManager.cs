@@ -19,7 +19,8 @@ public class DeathManager : MonoBehaviour
     {
         if (playerDead && Input.GetKeyDown(KeyCode.R))
         {
-            SceneManager.LoadScene("SampleScene");
+            //this will need to be redone atm, death re-sets to main menu
+            SceneManager.LoadScene("MainMenu");
         }
     }
 

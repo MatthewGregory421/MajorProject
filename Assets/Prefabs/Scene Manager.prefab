@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2585544353190748598}
   - component: {fileID: 6155992379506170054}
   - component: {fileID: 2459744951591972579}
+  - component: {fileID: 2873663119376219771}
   m_Layer: 0
   m_Name: Scene Manager
   m_TagString: Untagged
@@ -69,6 +70,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicManager: {fileID: 2585544353190748598}
+  menuPanel: {fileID: 0}
+  uiSFXManager: {fileID: 2873663119376219771}
 --- !u!114 &902241528752170410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,3 +137,20 @@ MonoBehaviour:
   idleCooldown: 8
   minStepInterval: 0.5
   maxStepInterval: 0.25
+--- !u!114 &2873663119376219771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872666659968173755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b596fc372748de40842cbe3023d9ae0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Open: {fileID: 0}
+  Close: {fileID: 0}
+  Confirm: {fileID: 0}
+  Forward: {fileID: 0}
+  Back: {fileID: 0}
