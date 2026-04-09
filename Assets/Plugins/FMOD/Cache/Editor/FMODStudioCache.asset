@@ -42,7 +42,7 @@ MonoBehaviour:
   Path: FMODAssets/CIM316.2_Shared FMod_Howard_1030726_300326/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639112559687825278
+  lastModified: 639113499003684917
   FileSizes:
   - Name: Desktop
     Value: 1342
@@ -714,7 +714,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 8999953657572529065}
   cacheVersion: 131858
-  cacheTime: 639112559688209793
+  cacheTime: 639113499004158504
   SerializableEventsDict:
   - key: event:/Ambience/ambience anger
     index: 0
@@ -789,7 +789,7 @@ MonoBehaviour:
   Path: FMODAssets/CIM316.2_Shared FMod_Howard_1030726_300326/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639112559688209793
+  lastModified: 639113499004158504
   FileSizes:
   - Name: Desktop
     Value: 3659680
@@ -809,7 +809,7 @@ MonoBehaviour:
   Path: FMODAssets/CIM316.2_Shared FMod_Howard_1030726_300326/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 639112559688036052
+  lastModified: 639113499004071148
   FileSizes:
   - Name: Desktop
     Value: 4749920
@@ -1045,7 +1045,7 @@ MonoBehaviour:
   Path: FMODAssets/CIM316.2_Shared FMod_Howard_1030726_300326/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639112559687828517
+  lastModified: 639113499003684917
   FileSizes:
   - Name: Desktop
     Value: 2548
