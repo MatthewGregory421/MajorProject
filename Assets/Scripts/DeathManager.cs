@@ -19,15 +19,22 @@ public class DeathManager : MonoBehaviour
     {
         if (playerDead && Input.GetKeyDown(KeyCode.R))
         {
-            //this will need to be redone atm, death re-sets to main menu
+            Time.timeScale = 1;
             SceneManager.LoadScene("MainMenu");
         }
     }
 
     public void PlayerDied()
     {
+        Time.timeScale = 0;
         playerDead = true;
         musicManager.StopMusEmitter();
         deathCanvas.SetActive(true);
+    }
+
+    public void RespawnMainMenu()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene("MainMenu");
     }
 }
