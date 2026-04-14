@@ -99,7 +99,7 @@
 	<object class="MixerBusPanner" id="{4146bced-2e3f-4da5-9347-74ce963db712}" />
 	<object class="MultiSound" id="{d791a511-ef7f-492c-b625-a9a314c6ef62}">
 		<property name="start">
-			<value>2.6086956521739131</value>
+			<value>5.2173958333333337</value>
 		</property>
 		<property name="length">
 			<value>10.434783514492754</value>
@@ -115,7 +115,7 @@
 	</object>
 	<object class="MultiSound" id="{ddbf4cf4-1674-4d04-82d9-7255e8acdb64}">
 		<property name="start">
-			<value>13.043478260869566</value>
+			<value>15.652178442028987</value>
 		</property>
 		<property name="length">
 			<value>10.434783514492754</value>
@@ -131,7 +131,7 @@
 	</object>
 	<object class="MultiSound" id="{d9950b77-2c5d-42ca-ab4b-aba61a024300}">
 		<property name="start">
-			<value>23.478260869565219</value>
+			<value>26.086961050724639</value>
 		</property>
 		<property name="length">
 			<value>10.434783514492754</value>
@@ -147,7 +147,7 @@
 	</object>
 	<object class="MultiSound" id="{495d224e-f242-4658-8493-75190316abb8}">
 		<property name="start">
-			<value>33.913043478260867</value>
+			<value>36.521743659420295</value>
 		</property>
 		<property name="length">
 			<value>10.434783514492754</value>
@@ -191,7 +191,7 @@
 	</object>
 	<object class="LoopRegion" id="{b4252d40-771a-4314-b61b-0c238a9807fe}">
 		<property name="position">
-			<value>2.6086956521739131</value>
+			<value>5.2173958333333337</value>
 		</property>
 		<property name="length">
 			<value>41.739131340579711</value>

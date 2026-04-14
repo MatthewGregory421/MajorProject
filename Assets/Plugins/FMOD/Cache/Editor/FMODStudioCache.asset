@@ -42,10 +42,10 @@ MonoBehaviour:
   Path: FMODAssets/CIM316.2_Shared FMod_Howard_1030726_300326/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639116377864224397
+  lastModified: 639117980827471166
   FileSizes:
   - Name: Desktop
-    Value: 1342
+    Value: 1492
   Exists: 1
 --- !u!114 &-8580810495042752791
 MonoBehaviour:
@@ -153,6 +153,7 @@ MonoBehaviour:
   IsOneShot: 0
   Parameters:
   - {fileID: -3149546330997600134}
+  - {fileID: 7639742921924765690}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -435,6 +436,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2000
+--- !u!114 &-4382099538846385009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Alive
+  m_EditorClassIdentifier: 
+  Name: Alive
+  StudioPath: parameter:/Alive
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3321088605
+    data2: 3768252165
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &-3733016842042030820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -709,12 +734,13 @@ MonoBehaviour:
   - {fileID: -8247507286338217132}
   EditorParameters:
   - {fileID: -5809858994033788440}
+  - {fileID: -4382099538846385009}
   MasterBanks:
   - {fileID: -8825886483869512796}
   StringsBanks:
   - {fileID: 8999953657572529065}
   cacheVersion: 131858
-  cacheTime: 639116377894674998
+  cacheTime: 639117980830512362
   SerializableEventsDict:
   - key: event:/Ambience/ambience anger
     index: 0
@@ -789,10 +815,10 @@ MonoBehaviour:
   Path: FMODAssets/CIM316.2_Shared FMod_Howard_1030726_300326/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639116377894674998
+  lastModified: 639117980830512362
   FileSizes:
   - Name: Desktop
-    Value: 3659776
+    Value: 3659680
   Exists: 1
 --- !u!114 &2432292288332997385
 MonoBehaviour:
@@ -809,10 +835,10 @@ MonoBehaviour:
   Path: FMODAssets/CIM316.2_Shared FMod_Howard_1030726_300326/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 639116377878366100
+  lastModified: 639117980829720685
   FileSizes:
   - Name: Desktop
-    Value: 4749888
+    Value: 4853312
   Exists: 1
 --- !u!114 &3358152127574715949
 MonoBehaviour:
@@ -949,6 +975,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 3000
+--- !u!114 &7639742921924765690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music Parent/Alive
+  m_EditorClassIdentifier: 
+  Name: Alive
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3321088605
+    data2: 3768252165
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &7836074107509008020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1045,8 +1095,8 @@ MonoBehaviour:
   Path: FMODAssets/CIM316.2_Shared FMod_Howard_1030726_300326/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639116377864239482
+  lastModified: 639117980827478995
   FileSizes:
   - Name: Desktop
-    Value: 2548
+    Value: 2596
   Exists: 1
