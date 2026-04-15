@@ -1,5 +1,6 @@
 using FMODUnity;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MusicManager : MonoBehaviour
 {
@@ -8,6 +9,10 @@ public class MusicManager : MonoBehaviour
     [SerializeField]
     [ParamRef]
     private string musicSelect = null;
+
+    [SerializeField]
+    [ParamRef]
+    private string FadeoutAlive = null;
 
 
     
@@ -19,6 +24,7 @@ public class MusicManager : MonoBehaviour
         public void StopMusEmitter()
     {
         RuntimeManager.StudioSystem.setParameterByName(musicSelect, 0);
+        //Mus.Stop();
     }
 
     // The below code is how we select which music plays, the tricky thing is setting up the scene loading so that each scene uniquely calls one of these functions
@@ -70,5 +76,15 @@ public class MusicManager : MonoBehaviour
      public void MusSOAPlay()
     {
         RuntimeManager.StudioSystem.setParameterByName(musicSelect, 10);
+    }
+
+    public void MusAliveFO()
+    {
+        RuntimeManager.StudioSystem.setParameterByName(FadeoutAlive, 1);
+    }
+
+    public void MusDeadFO()
+    {
+        RuntimeManager.StudioSystem.setParameterByName(FadeoutAlive, 0);
     }
 }
