@@ -209,9 +209,10 @@ public class MainMenu : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("Hub Proto");
         // hopefully this doesn't break shit
-        musicManager.StopMusEmitter();
+        musicManager.MusAliveFO();
+        musicManager.MusHOHPlay();
+        SceneManager.LoadScene("Hub Proto");
     }
 
     public void QuitGame()

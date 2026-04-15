@@ -28,6 +28,7 @@ public class DeathManager : MonoBehaviour
     {
         Time.timeScale = 0;
         playerDead = true;
+        musicManager.MusDeadFO();
         musicManager.StopMusEmitter();
         deathCanvas.SetActive(true);
     }

@@ -7,6 +7,6 @@ public class HubMusicStarter : MonoBehaviour
     private void Start()
     {
         musicManager.MusHOHPlay();
-        musicManager.PlayMusEmitter();
+        //musicManager.PlayMusEmitter();
     }
 }
