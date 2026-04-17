@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 7460366393225161041}
   - component: {fileID: 2536271671917198698}
   - component: {fileID: 8751708677010052850}
-  - component: {fileID: 8378545687140109909}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -144,37 +143,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nonRigidbodyVelocity: 0
   attenuationObject: {fileID: 0}
---- !u!114 &8378545687140109909
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 654247038261356956}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: -709875834
-      Data2: 1129681821
-      Data3: 832103067
-      Data4: -1417449006
-    Path: event:/Music/Music Parent
-  Event: 
-  EventPlayTrigger: 0
-  EventStopTrigger: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 1
-  NonRigidbodyVelocity: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1 &806569780330011211
 GameObject:
   m_ObjectHideFlags: 0
@@ -489,7 +457,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -521,7 +489,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 384
   moveSpeed: 7
-  jumpForce: 8
+  jumpForce: 14
   footstepEmitter: {fileID: 3365635148039337455}
   minStepInterval: 0.5
   maxStepInterval: 0.25
@@ -535,7 +503,7 @@ MonoBehaviour:
   rb: {fileID: 2174007469622059135}
   isGrounded: 0
   isCrouching: 0
-  crouchSpeedMultiplyer: 0.5
+  crouchSpeedMultiplyer: 0.75
   capsule: {fileID: 3453660772210760090}
   crouchHeightMultiplier: 0.5
   ceilingLayer:
