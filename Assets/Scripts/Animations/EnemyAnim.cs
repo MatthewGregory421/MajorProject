@@ -20,6 +20,6 @@ public class EnemyAnim : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        animator.SetFloat("Xvel", rb.linearVelocityX);
+        animator.SetFloat("Xvel", Mathf.Abs(rb.linearVelocityX));
     }
 }
