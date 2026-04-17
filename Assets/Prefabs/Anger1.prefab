@@ -268,11 +268,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 1385294322
-      Data2: 1271398606
-      Data3: 1608620161
-      Data4: 1363475163
-    Path: event:/Enemy/SAD/Sad Impact
+      Data1: 2025204657
+      Data2: 1204236771
+      Data3: -1455637088
+      Data4: 907380359
+    Path: event:/Enemy/ANGER/Anger Impact
   Event: 
   EventPlayTrigger: 0
   EventStopTrigger: 0
@@ -299,11 +299,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 1423960066
-      Data2: 1237188862
-      Data3: 84920766
-      Data4: 889630539
-    Path: event:/Enemy/SAD/Sad Attack
+      Data1: -1568125285
+      Data2: 1103035640
+      Data3: -1122099049
+      Data4: -1485064161
+    Path: event:/Enemy/ANGER/Anger Attack
   Event: 
   EventPlayTrigger: 0
   EventStopTrigger: 0
@@ -330,11 +330,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 1217957844
-      Data2: 1080648591
-      Data3: 751318406
-      Data4: -1313519116
-    Path: event:/Enemy/SAD/Sad Idle
+      Data1: -559244495
+      Data2: 1336283244
+      Data3: -1703928678
+      Data4: 2137390737
+    Path: event:/Enemy/ANGER/Anger Idle
   Event: 
   EventPlayTrigger: 0
   EventStopTrigger: 0
