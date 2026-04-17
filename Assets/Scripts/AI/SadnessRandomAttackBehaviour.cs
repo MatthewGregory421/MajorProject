@@ -317,6 +317,7 @@ public class RandomBehaviorAttack : EnemyAttack
         {
             Vector2 knockDir = (baseEnemy.player.position - transform.position).normalized;
             playerHealth.TakeDamage(collisionDamage, knockDir);
+            attackEvent.Invoke();
         }
     }
 

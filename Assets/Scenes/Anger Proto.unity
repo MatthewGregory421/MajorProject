@@ -975,7 +975,7 @@ PrefabInstance:
       objectReference: {fileID: 2132377781}
     - target: {fileID: 7552123196532126516, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 46.81
+      value: 35.89
       objectReference: {fileID: 0}
     - target: {fileID: 7552123196532126516, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1747,7 +1747,7 @@ PrefabInstance:
       objectReference: {fileID: 2132377781}
     - target: {fileID: 7552123196532126516, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 36.76
+      value: 32.8
       objectReference: {fileID: 0}
     - target: {fileID: 7552123196532126516, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2284,79 +2284,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4751589501264560799, guid: dedef38bd737741d5be0dfafb8222325, type: 3}
   m_PrefabInstance: {fileID: 955537329}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &975006739
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1781038338245925034, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-      propertyPath: m_Name
-      value: Anger1 (7)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6212257665572205926, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-      propertyPath: sadnessSFXManager
-      value: 
-      objectReference: {fileID: 2132377781}
-    - target: {fileID: 6404116357404809578, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1545737837}
-    - target: {fileID: 6404116357404809578, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-      propertyPath: sfxManager
-      value: 
-      objectReference: {fileID: 2132377781}
-    - target: {fileID: 7552123196532126516, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 34.63
-      objectReference: {fileID: 0}
-    - target: {fileID: 7552123196532126516, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3.51
-      objectReference: {fileID: 0}
-    - target: {fileID: 7552123196532126516, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7552123196532126516, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7552123196532126516, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7552123196532126516, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7552123196532126516, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7552123196532126516, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7552123196532126516, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7552123196532126516, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8554317435377039191, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-      propertyPath: sadnessSFXManager
-      value: 
-      objectReference: {fileID: 2132377781}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
 --- !u!1 &990700624
 GameObject:
   m_ObjectHideFlags: 0
@@ -3995,7 +3922,7 @@ PrefabInstance:
       objectReference: {fileID: 2132377781}
     - target: {fileID: 7552123196532126516, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 27.84
+      value: 26.3
       objectReference: {fileID: 0}
     - target: {fileID: 7552123196532126516, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4248,79 +4175,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3742689570556611021, guid: 40bc5f46d5d39492baec187179a96cbe, type: 3}
   m_PrefabInstance: {fileID: 1812951254}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1823947071
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1781038338245925034, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-      propertyPath: m_Name
-      value: Anger1 (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6212257665572205926, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-      propertyPath: sadnessSFXManager
-      value: 
-      objectReference: {fileID: 2132377781}
-    - target: {fileID: 6404116357404809578, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1545737837}
-    - target: {fileID: 6404116357404809578, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-      propertyPath: sfxManager
-      value: 
-      objectReference: {fileID: 2132377781}
-    - target: {fileID: 7552123196532126516, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 16.52
-      objectReference: {fileID: 0}
-    - target: {fileID: 7552123196532126516, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 24.29
-      objectReference: {fileID: 0}
-    - target: {fileID: 7552123196532126516, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7552123196532126516, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7552123196532126516, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7552123196532126516, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7552123196532126516, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7552123196532126516, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7552123196532126516, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7552123196532126516, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8554317435377039191, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-      propertyPath: sadnessSFXManager
-      value: 
-      objectReference: {fileID: 2132377781}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
 --- !u!1 &1877372684
 GameObject:
   m_ObjectHideFlags: 0
@@ -4821,11 +4675,11 @@ PrefabInstance:
     - target: {fileID: 2459744951591972579, guid: b7f86d3f419354705919735169b7388e, type: 3}
       propertyPath: EnemyHit
       value: 
-      objectReference: {fileID: 6630373956203894131}
+      objectReference: {fileID: 0}
     - target: {fileID: 2459744951591972579, guid: b7f86d3f419354705919735169b7388e, type: 3}
       propertyPath: EnemyIdle
       value: 
-      objectReference: {fileID: 6630373956203894130}
+      objectReference: {fileID: 0}
     - target: {fileID: 2459744951591972579, guid: b7f86d3f419354705919735169b7388e, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -4833,11 +4687,11 @@ PrefabInstance:
     - target: {fileID: 2459744951591972579, guid: b7f86d3f419354705919735169b7388e, type: 3}
       propertyPath: sadnessAttack
       value: 
-      objectReference: {fileID: 6630373956203894132}
+      objectReference: {fileID: 0}
     - target: {fileID: 2459744951591972579, guid: b7f86d3f419354705919735169b7388e, type: 3}
       propertyPath: footstepEmitter
       value: 
-      objectReference: {fileID: 6630373956203894129}
+      objectReference: {fileID: 0}
     - target: {fileID: 2585544353190748598, guid: b7f86d3f419354705919735169b7388e, type: 3}
       propertyPath: Mus
       value: 
@@ -5013,183 +4867,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4751589501264560799, guid: dedef38bd737741d5be0dfafb8222325, type: 3}
   m_PrefabInstance: {fileID: 2146214234}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &6630373956203894128
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 273295593164132677, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-      propertyPath: EventReference.Path
-      value: event:/Enemy/ANGER/Anger Impact
-      objectReference: {fileID: 0}
-    - target: {fileID: 273295593164132677, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-      propertyPath: EventReference.Guid.Data1
-      value: 2025204657
-      objectReference: {fileID: 0}
-    - target: {fileID: 273295593164132677, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-      propertyPath: EventReference.Guid.Data2
-      value: 1204236771
-      objectReference: {fileID: 0}
-    - target: {fileID: 273295593164132677, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-      propertyPath: EventReference.Guid.Data3
-      value: -1455637088
-      objectReference: {fileID: 0}
-    - target: {fileID: 273295593164132677, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-      propertyPath: EventReference.Guid.Data4
-      value: 907380359
-      objectReference: {fileID: 0}
-    - target: {fileID: 1781038338245925034, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-      propertyPath: m_Name
-      value: Anger1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2892959115367223631, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-      propertyPath: EventReference.Path
-      value: event:/Enemy/ANGER/Anger Attack
-      objectReference: {fileID: 0}
-    - target: {fileID: 2892959115367223631, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-      propertyPath: EventReference.Guid.Data1
-      value: -1568125285
-      objectReference: {fileID: 0}
-    - target: {fileID: 2892959115367223631, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-      propertyPath: EventReference.Guid.Data2
-      value: 1103035640
-      objectReference: {fileID: 0}
-    - target: {fileID: 2892959115367223631, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-      propertyPath: EventReference.Guid.Data3
-      value: -1122099049
-      objectReference: {fileID: 0}
-    - target: {fileID: 2892959115367223631, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-      propertyPath: EventReference.Guid.Data4
-      value: -1485064161
-      objectReference: {fileID: 0}
-    - target: {fileID: 3542240388986654660, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-      propertyPath: EventReference.Path
-      value: event:/Enemy/ANGER/Anger Idle
-      objectReference: {fileID: 0}
-    - target: {fileID: 3542240388986654660, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-      propertyPath: EventReference.Guid.Data1
-      value: -559244495
-      objectReference: {fileID: 0}
-    - target: {fileID: 3542240388986654660, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-      propertyPath: EventReference.Guid.Data2
-      value: 1336283244
-      objectReference: {fileID: 0}
-    - target: {fileID: 3542240388986654660, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-      propertyPath: EventReference.Guid.Data3
-      value: -1703928678
-      objectReference: {fileID: 0}
-    - target: {fileID: 3542240388986654660, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-      propertyPath: EventReference.Guid.Data4
-      value: 2137390737
-      objectReference: {fileID: 0}
-    - target: {fileID: 6212257665572205926, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-      propertyPath: sadnessSFXManager
-      value: 
-      objectReference: {fileID: 2132377781}
-    - target: {fileID: 6404116357404809578, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1545737837}
-    - target: {fileID: 6404116357404809578, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-      propertyPath: sfxManager
-      value: 
-      objectReference: {fileID: 2132377781}
-    - target: {fileID: 7552123196532126516, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 7.54
-      objectReference: {fileID: 0}
-    - target: {fileID: 7552123196532126516, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 20.38
-      objectReference: {fileID: 0}
-    - target: {fileID: 7552123196532126516, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7552123196532126516, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7552123196532126516, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7552123196532126516, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7552123196532126516, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7552123196532126516, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7552123196532126516, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7552123196532126516, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8554317435377039191, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-      propertyPath: sadnessSFXManager
-      value: 
-      objectReference: {fileID: 2132377781}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
---- !u!114 &6630373956203894129 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4099279310294435306, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-  m_PrefabInstance: {fileID: 6630373956203894128}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &6630373956203894130 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3542240388986654660, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-  m_PrefabInstance: {fileID: 6630373956203894128}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &6630373956203894131 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 273295593164132677, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-  m_PrefabInstance: {fileID: 6630373956203894128}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &6630373956203894132 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2892959115367223631, guid: a02cc8817bef32f40833f23242a633c7, type: 3}
-  m_PrefabInstance: {fileID: 6630373956203894128}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -5204,13 +4881,10 @@ SceneRoots:
   - {fileID: 2132377776}
   - {fileID: 710594036}
   - {fileID: 58390689}
-  - {fileID: 6630373956203894128}
   - {fileID: 296049174}
   - {fileID: 467652547}
-  - {fileID: 1823947071}
   - {fileID: 262691915}
   - {fileID: 524461640}
   - {fileID: 718697869}
-  - {fileID: 975006739}
   - {fileID: 1702884558}
   - {fileID: 412030497}
