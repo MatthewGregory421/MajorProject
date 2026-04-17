@@ -4,30 +4,36 @@ using UnityEngine.SceneManagement;
 public class DeathManager : MonoBehaviour
 {
     public MusicManager musicManager;
+    public UISFXManager uiSFXManager;
 
     public GameObject deathCanvas;
-
-    private bool playerDead;
 
     private void Start()
     {
         deathCanvas.SetActive(false);
-        playerDead = false;
-    }
-
-    private void Update()
-    {
-        if (playerDead && Input.GetKeyDown(KeyCode.R))
-        {
-            //this will need to be redone atm, death re-sets to main menu
-            SceneManager.LoadScene("MainMenu");
-        }
     }
 
     public void PlayerDied()
     {
-        playerDead = true;
-        musicManager.StopMusEmitter();
+        Time.timeScale = 0;
         deathCanvas.SetActive(true);
+    }
+
+    public void MainMenu()
+    {
+        Time.timeScale = 1;
+        uiSFXManager.PlayConfirm();
+        musicManager.MusDeadFO();
+        musicManager.StopMusEmitter();
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void Respawn()
+    {
+        Time.timeScale = 1;
+        uiSFXManager.PlayConfirm();
+        musicManager.MusDeadFO();
+        musicManager.StopMusEmitter();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

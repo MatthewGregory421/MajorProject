@@ -1,9 +1,12 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class EnemyAttack : MonoBehaviour
 {
+    public UnityEvent attackEvent;
     protected BaseEnemy baseEnemy;
     protected EnemyAI enemyAI;
+    
 
     [Header("Attack Settings")]
     public float attackCooldown = 1f;
@@ -33,11 +36,13 @@ public class EnemyAttack : MonoBehaviour
 
         lastAttackTime = Time.time;
         PerformAttack();
+        
     }
 
     protected virtual void PerformAttack()
     {
         // OVERRIDE THIS IN CHILD CLASSES
         Debug.Log("Enemy attacked (base)");
+        attackEvent.Invoke();
     }
 }

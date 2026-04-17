@@ -369,6 +369,6 @@ public class PlayerMovement : MonoBehaviour
         isDashing = false;
         isInvulnerable = false;
 
-        rb.gravityScale = 1f; // set back to normal gravity
+        rb.gravityScale = 2f; // set back to normal gravity
     }
 }

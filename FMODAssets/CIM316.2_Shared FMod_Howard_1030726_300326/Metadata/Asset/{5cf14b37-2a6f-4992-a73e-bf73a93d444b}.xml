@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="EncodableAsset" id="{5cf14b37-2a6f-4992-a73e-bf73a93d444b}">
+		<property name="assetPath">
+			<value>1404_UpdatedMusicalAssets/wEffects/FadeIns/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{b2a06b5f-82be-4802-9a08-04b372cb9a4e}</destination>
+		</relationship>
+	</object>
+</objects>
