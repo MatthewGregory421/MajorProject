@@ -25,6 +25,9 @@ public class PlayerCombat : MonoBehaviour
     public float slamHorizontalForce = 10f;
     public float slamVerticalForce = 6f;
 
+    [Header("Floating Text")]
+    public GameObject floatingTextPrefab;
+
     private HashSet<BaseEnemy> enemiesHit = new HashSet<BaseEnemy>();
 
     private int lastHorizontal = 1;
@@ -106,7 +109,11 @@ public class PlayerCombat : MonoBehaviour
                 enemiesHit.Add(enemy);
 
                 Vector2 knockDir = ((Vector2)(enemy.transform.position - transform.position)).normalized;
-                enemy.TakeDamage(1, knockDir); // <-- APPLY DAMAGE + KNOCKBACK + FLASH
+                enemy.TakeDamage(1, knockDir); // <-- APPLY DAMAGE + KNOCKBACK + FLASH\
+
+                // Spawn floating text above enemy
+                Vector3 textPos = enemy.transform.position + Vector3.up * 1.5f;
+                Instantiate(floatingTextPrefab, textPos, Quaternion.identity);
             }
         }
 
@@ -146,6 +153,10 @@ public class PlayerCombat : MonoBehaviour
                 enemiesHit.Add(enemy);
                 Vector2 dir = Vector2.down;
                 enemy.TakeDamage(1, dir); // <-- slam damage + knockback
+
+                // Spawn floating text above enemy
+                Vector3 textPos = enemy.transform.position + Vector3.up * 1.5f;
+                Instantiate(floatingTextPrefab, textPos, Quaternion.identity);
             }
         }
 
@@ -164,6 +175,10 @@ public class PlayerCombat : MonoBehaviour
                     enemiesHit.Add(enemy);
                     Vector2 dir = ((Vector2)(enemy.transform.position - transform.position)).normalized;
                     enemy.TakeDamage(1, dir);
+
+                    // Spawn floating text above enemy
+                    Vector3 textPos = enemy.transform.position + Vector3.up * 1.5f;
+                    Instantiate(floatingTextPrefab, textPos, Quaternion.identity);
                 }
             }
 
@@ -178,6 +193,10 @@ public class PlayerCombat : MonoBehaviour
                     enemiesHit.Add(enemy);
                     Vector2 dir = ((Vector2)(enemy.transform.position - transform.position)).normalized;
                     enemy.TakeDamage(1, dir);
+
+                    // Spawn floating text above enemy
+                    Vector3 textPos = enemy.transform.position + Vector3.up * 1.5f;
+                    Instantiate(floatingTextPrefab, textPos, Quaternion.identity);
                 }
             }
         }

@@ -543,6 +543,7 @@ MonoBehaviour:
   normalVerticalForce: 2
   slamHorizontalForce: 10
   slamVerticalForce: 6
+  floatingTextPrefab: {fileID: 6105210251595784868, guid: 12c8d7c953972124a951c5abb46eae52, type: 3}
 --- !u!114 &4863651225202473930
 MonoBehaviour:
   m_ObjectHideFlags: 0
