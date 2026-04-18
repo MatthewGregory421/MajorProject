@@ -31,6 +31,7 @@
 			<destination>{9894ec11-37b2-45bc-9aed-a504543671c4}</destination>
 			<destination>{4cf98df1-bf3b-4122-9d70-edce487efd53}</destination>
 			<destination>{8b215a21-7a44-4fba-aee4-4917a472ccf9}</destination>
+			<destination>{80e6e913-6178-448b-a4e5-febfbc5c2523}</destination>
 		</relationship>
 		<relationship name="timeline">
 			<destination>{b5b072b3-2a26-47af-942c-31b14d1b5eb8}</destination>
@@ -92,6 +93,11 @@
 			<destination>{b02dacd6-f6d0-4797-addc-7716faea3ee8}</destination>
 		</relationship>
 	</object>
+	<object class="GroupTrack" id="{80e6e913-6178-448b-a4e5-febfbc5c2523}">
+		<relationship name="mixerGroup">
+			<destination>{1826de54-b294-4229-b55c-246b7acf8fc0}</destination>
+		</relationship>
+	</object>
 	<object class="Timeline" id="{b5b072b3-2a26-47af-942c-31b14d1b5eb8}">
 		<relationship name="modules">
 			<destination>{56f1faa0-4280-409a-b6aa-e88df1e4f6ec}</destination>
@@ -145,7 +151,7 @@
 			<destination>{79065336-f774-499b-8318-75997592be79}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{ddd09279-a89a-40bd-8405-b7e98486bffb}</destination>
+			<destination>{1826de54-b294-4229-b55c-246b7acf8fc0}</destination>
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{4cab2d8d-128b-425e-a195-51483d0a218b}">
@@ -173,7 +179,7 @@
 			<destination>{5455e1ba-83f4-4045-891e-398ad12f19ef}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{ddd09279-a89a-40bd-8405-b7e98486bffb}</destination>
+			<destination>{1826de54-b294-4229-b55c-246b7acf8fc0}</destination>
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{4ffd221c-b3b4-49eb-913c-0d4ea3e94c51}">
@@ -204,7 +210,7 @@
 			<destination>{1f28848f-598e-4d12-afa5-86791430c6c0}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{ddd09279-a89a-40bd-8405-b7e98486bffb}</destination>
+			<destination>{1826de54-b294-4229-b55c-246b7acf8fc0}</destination>
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{cd05a30b-24ac-4fb7-9776-634f6956059e}">
@@ -233,6 +239,23 @@
 		</relationship>
 		<relationship name="panner">
 			<destination>{d9dc8a0c-6850-4e35-b0ae-3b77a2d5dd8b}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{1826de54-b294-4229-b55c-246b7acf8fc0}</destination>
+		</relationship>
+	</object>
+	<object class="EventMixerGroup" id="{1826de54-b294-4229-b55c-246b7acf8fc0}">
+		<property name="volume">
+			<value>-25</value>
+		</property>
+		<property name="name">
+			<value>Anger Under Gross Fix</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{b5ae7088-dbaa-4c43-af47-1f3af7aa42b9}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{9803557c-0ee1-4815-b17f-f4f33eee6d03}</destination>
 		</relationship>
 		<relationship name="output">
 			<destination>{ddd09279-a89a-40bd-8405-b7e98486bffb}</destination>
@@ -380,6 +403,15 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{d9dc8a0c-6850-4e35-b0ae-3b77a2d5dd8b}" />
+	<object class="MixerBusEffectChain" id="{b5ae7088-dbaa-4c43-af47-1f3af7aa42b9}">
+		<relationship name="effects">
+			<destination>{ea7c03d4-c6aa-40eb-af72-3b0ad2b369ba}</destination>
+			<destination>{7b924dae-0335-40b3-8868-6f0e5fef8cd4}</destination>
+			<destination>{f7b077e5-b1ef-4357-a34d-a6c483d321ee}</destination>
+			<destination>{a4451acf-a801-4608-94f3-64fe2c04071b}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{9803557c-0ee1-4815-b17f-f4f33eee6d03}" />
 	<object class="EventCondition" id="{c65a0170-53cb-4d81-9916-9d31882885f0}">
 		<property name="eventState">
 			<value>1</value>
@@ -447,4 +479,20 @@
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{ab6595e3-cbbe-4cd8-9b82-cc1a648fc658}" />
+	<object class="LoudnessMeter" id="{ea7c03d4-c6aa-40eb-af72-3b0ad2b369ba}">
+		<property name="loudnessTarget">
+			<value>-24</value>
+		</property>
+	</object>
+	<object class="DistortionEffect" id="{7b924dae-0335-40b3-8868-6f0e5fef8cd4}">
+		<property name="level">
+			<value>0.949999988</value>
+		</property>
+	</object>
+	<object class="MixerBusFader" id="{f7b077e5-b1ef-4357-a34d-a6c483d321ee}" />
+	<object class="LoudnessMeter" id="{a4451acf-a801-4608-94f3-64fe2c04071b}">
+		<property name="loudnessTarget">
+			<value>-24</value>
+		</property>
+	</object>
 </objects>

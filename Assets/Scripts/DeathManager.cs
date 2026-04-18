@@ -17,14 +17,14 @@ public class DeathManager : MonoBehaviour
     {
         Time.timeScale = 0;
         deathCanvas.SetActive(true);
+        musicManager.MusDeadFO();
+        musicManager.SilenceMusEmitter();
     }
 
     public void MainMenu()
     {
         Time.timeScale = 1;
         uiSFXManager.PlayConfirm();
-        musicManager.MusDeadFO();
-        musicManager.StopMusEmitter();
         SceneManager.LoadScene("MainMenu");
     }
 
@@ -32,8 +32,6 @@ public class DeathManager : MonoBehaviour
     {
         Time.timeScale = 1;
         uiSFXManager.PlayConfirm();
-        musicManager.MusDeadFO();
-        musicManager.StopMusEmitter();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

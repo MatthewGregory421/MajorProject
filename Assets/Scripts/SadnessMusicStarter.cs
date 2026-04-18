@@ -9,6 +9,5 @@ public class SadnessMusicStarter : MonoBehaviour
     private void Start()
     {
         musicManager.MusSOSPlay();
-        musicManager.PlayMusEmitter();
     }
 }

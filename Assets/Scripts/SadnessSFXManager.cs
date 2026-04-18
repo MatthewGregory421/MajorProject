@@ -9,7 +9,7 @@ public class SadnessSFXManager : MonoBehaviour
     public StudioEventEmitter sadnessAttack;
     public StudioEventEmitter EnemyHit;
     public StudioEventEmitter EnemyIdle;
-    public StudioEventEmitter footstepEmitter;
+    //public StudioEventEmitter footstepEmitter;
     [Header("Cooldown Settings")]
     public float idleCooldown = 5f; // 5 seconds cooldown
     private float lastidleTime = -Mathf.Infinity;
@@ -69,7 +69,7 @@ public class SadnessSFXManager : MonoBehaviour
             enemy.stepTimer -= Time.deltaTime;
             if (enemy.stepTimer <= 0f)
             {
-                footstepEmitter.Play();
+                //footstepEmitter.Play();
                 enemy.stepTimer = currentStepInterval;
             }
         }
