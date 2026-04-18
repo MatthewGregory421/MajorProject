@@ -48,7 +48,7 @@ public class Hearttracker : MonoBehaviour
         heartobjects = new GameObject[pHealth.maxHealth];
         for (int i = 0; i < heartobjects.Length; i++)
         {
-            heartobjects[i] = Instantiate(heartIcon, gameObject.transform);
+            heartobjects[i] = Instantiate(heartIcon, gameObject.transform.position + new Vector3(i * 0.5f, 0,0), gameObject.transform.rotation, gameObject.transform);
         }
         initialized = true;
         currenthearts = pHealth.maxHealth;
