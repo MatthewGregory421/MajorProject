@@ -13,24 +13,12 @@ public class MainMenu : MonoBehaviour
 
     public GameObject menuPanel;
     public GameObject optionsPanel;
-
-    [Header("Audio")]
-    public Slider volumeSlider;
    // private VCA masterVCA;
 
     void Start()
     {
         menuPanel.SetActive(true);
         optionsPanel.SetActive(false);
-
-    //    masterVCA = RuntimeManager.GetVCA("vca:/Master");
-
-    //    float savedVolume = PlayerPrefs.GetFloat("volume", 1f);
-     //   volumeSlider.value = savedVolume;
-
-    //    SetVolume(savedVolume);
-
-    //    volumeSlider.onValueChanged.AddListener(SetVolume);
     }
 
     public void StartGame()
@@ -46,16 +34,6 @@ public class MainMenu : MonoBehaviour
         menuPanel.SetActive(false);
         optionsPanel.SetActive(true);
     }
-
-   // public void SetVolume(float value)
-  //  {
-   //     masterVCA.setVolume(value);
-   //
-    //    PlayerPrefs.SetFloat("volume", value);
-    //    PlayerPrefs.Save();
-//
-    //    Debug.Log("FMOD VCA volume: " + value);
-   // }
 
     public void BackButton()
     {

@@ -1,64 +1,72 @@
 using FMODUnity;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 public class VolumeController : MonoBehaviour
-{   
-    // these fields give us control over our global parameters for volume
+{
+    [Header("FMOD Parameters")]
+    [SerializeField][ParamRef] private string MasterVolume;
+    [SerializeField][ParamRef] private string MusicVolume;
+    [SerializeField][ParamRef] private string SFXVolume;
 
-    [SerializeField]
-    [ParamRef]
-    private string MusicVolume = null;
+    [Header("UI Sliders")]
+    public Slider masterSlider;
+    public Slider musicSlider;
+    public Slider sfxSlider;
 
-    [SerializeField]
-    [ParamRef]
-    private string SFXVolume = null;
-
-    [SerializeField]
-    [ParamRef]
-    private string MasterVolume = null;
-
-    
-    //These Public voids are my best guess at making functions to handle those volume changes
-
-    //Music
-    public void IncreaseMusVolume()
+    void Start()
     {
-        RuntimeManager.StudioSystem.setParameterByName(MusicVolume, +1);
-        //idk if that plus one actually behaves like I think it should, just adding 1 to whatever the parameter value currently is
+        // Load saved values (default = 1)
+        float master = PlayerPrefs.GetFloat("MasterVol", 1f);
+        float music = PlayerPrefs.GetFloat("MusicVol", 1f);
+        float sfx = PlayerPrefs.GetFloat("SFXVol", 1f);
+
+        // Set slider positions
+        masterSlider.value = master;
+        musicSlider.value = music;
+        sfxSlider.value = sfx;
+
+        // Apply to FMOD immediately
+        SetMasterVolume(master);
+        SetMusicVolume(music);
+        SetSFXVolume(sfx);
+
+        // Hook sliders
+        masterSlider.onValueChanged.AddListener(SetMasterVolume);
+        musicSlider.onValueChanged.AddListener(SetMusicVolume);
+        sfxSlider.onValueChanged.AddListener(SetSFXVolume);
     }
 
-    public void DecreaseMusVolume()
+    public void SetMasterVolume(float value)
     {
-        RuntimeManager.StudioSystem.setParameterByName(MusicVolume, -1);
-        //idk if that minus one actually behaves like I think it should, just taking one away from whatever the parameter value currently is
+        float scaledValue = value * 10f;
+
+        RuntimeManager.StudioSystem.setParameterByName(MasterVolume, scaledValue);
+
+        Debug.Log($"Master Slider: {value} = FMOD: {scaledValue}");
+
+        PlayerPrefs.SetFloat("MasterVol", value);
     }
 
-    //SFX
-    public void IncreaseSFXVolume()
+    public void SetMusicVolume(float value)
     {
-        RuntimeManager.StudioSystem.setParameterByName(SFXVolume, +1);
-        //idk if that plus one actually behaves like I think it should, just adding 1 to whatever the parameter value currently is
+        float scaledValue = value * 10f;
+
+        RuntimeManager.StudioSystem.setParameterByName(MusicVolume, scaledValue);
+
+        Debug.Log($"Music Slider: {value} = FMOD: {scaledValue}");
+
+        PlayerPrefs.SetFloat("MusicVol", value);
     }
 
-    public void DecreaseSFXVolume()
+    public void SetSFXVolume(float value)
     {
-        RuntimeManager.StudioSystem.setParameterByName(SFXVolume, -1);
-        //idk if that minus one actually behaves like I think it should, just taking one away from whatever the parameter value currently is
+        float scaledValue = value * 10f;
+
+        RuntimeManager.StudioSystem.setParameterByName(SFXVolume, scaledValue);
+
+        Debug.Log($"SFX Slider: {value} = FMOD: {scaledValue}");
+
+        PlayerPrefs.SetFloat("SFXVol", value);
     }
-
-    //Master
-    public void IncreaseMasterVolume()
-    {
-        RuntimeManager.StudioSystem.setParameterByName(MasterVolume, +1);
-        //idk if that plus one actually behaves like I think it should, just adding 1 to whatever the parameter value currently is
-    }
-
-    public void DecreaseMasterVolume()
-    {
-        RuntimeManager.StudioSystem.setParameterByName(MasterVolume, -1);
-        //idk if that minus one actually behaves like I think it should, just taking one away from whatever the parameter value currently is
-    }
-
-    //in theory if things work the way I think, it should now just be a matter of hooking these functions up to whichever menus screen they need to be attached too.
-
 }
