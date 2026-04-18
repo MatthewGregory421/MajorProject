@@ -1,5 +1,77 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9103803346771735096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Open Menu/Sound Effect Volume
+  m_EditorClassIdentifier: 
+  Name: Sound Effect Volume
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 10
+  ID:
+    data1: 1391531231
+    data2: 4005377249
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-8945197657147621801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/Master Volume
+  m_EditorClassIdentifier: 
+  Name: Master Volume
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 10
+  ID:
+    data1: 1288323969
+    data2: 2105759058
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-8897788421645532901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Sad Impact/Master Volume
+  m_EditorClassIdentifier: 
+  Name: Master Volume
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 10
+  ID:
+    data1: 1288323969
+    data2: 2105759058
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &-8840436176220477792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23,7 +95,9 @@ MonoBehaviour:
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: -3720647944491422369}
+  - {fileID: 8953522625154010283}
   MinDistance: 1
   MaxDistance: 20
   Length: 148
@@ -42,10 +116,10 @@ MonoBehaviour:
   Path: FMODAssets/CIM316.2_Shared FMod_Howard_1030726_300326/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639120465679131152
+  lastModified: 639121268110251828
   FileSizes:
   - Name: Desktop
-    Value: 1492
+    Value: 1970
   Exists: 1
 --- !u!114 &-8580810495042752791
 MonoBehaviour:
@@ -70,7 +144,9 @@ MonoBehaviour:
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: 2133181150197854414}
+  - {fileID: -2063169085171192505}
   MinDistance: 1
   MaxDistance: 20
   Length: 278
@@ -97,7 +173,9 @@ MonoBehaviour:
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: 7851892661342636593}
+  - {fileID: 5239629319971587035}
   MinDistance: 1
   MaxDistance: 20
   Length: 116308
@@ -124,7 +202,9 @@ MonoBehaviour:
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: 3639554122100879576}
+  - {fileID: -1170770991830509982}
   MinDistance: 1
   MaxDistance: 20
   Length: 4000
@@ -154,9 +234,35 @@ MonoBehaviour:
   Parameters:
   - {fileID: -3149546330997600134}
   - {fileID: 7639742921924765690}
+  - {fileID: 8658174991685318340}
+  - {fileID: -3648805449575120721}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-8135412632954852748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/ambience hub/Music Volume
+  m_EditorClassIdentifier: 
+  Name: Music Volume
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 10
+  ID:
+    data1: 890575314
+    data2: 321853071
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &-8051382103866542684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,6 +290,54 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 742
+--- !u!114 &-8013657950798218267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Anger Attack/Master Volume
+  m_EditorClassIdentifier: 
+  Name: Master Volume
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 10
+  ID:
+    data1: 1288323969
+    data2: 2105759058
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-7494494112714358805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Sad Idle/Master Volume
+  m_EditorClassIdentifier: 
+  Name: Master Volume
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 10
+  ID:
+    data1: 1288323969
+    data2: 2105759058
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &-7372861320072033437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -207,7 +361,9 @@ MonoBehaviour:
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: -4132915008220063378}
+  - {fileID: -8897788421645532901}
   MinDistance: 1
   MaxDistance: 20
   Length: 2500
@@ -234,10 +390,60 @@ MonoBehaviour:
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: 6050128331172736090}
+  - {fileID: 2768958225772462490}
   MinDistance: 1
   MaxDistance: 20
   Length: 119843
+--- !u!114 &-6862165168122132238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Anger Impact/Master Volume
+  m_EditorClassIdentifier: 
+  Name: Master Volume
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 10
+  ID:
+    data1: 1288323969
+    data2: 2105759058
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-6739571211119104909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ground slam/Master Volume
+  m_EditorClassIdentifier: 
+  Name: Master Volume
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 10
+  ID:
+    data1: 1288323969
+    data2: 2105759058
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &-6309025400759084360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -261,7 +467,9 @@ MonoBehaviour:
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: 5645752450746407859}
+  - {fileID: 8300516318799647867}
   MinDistance: 1
   MaxDistance: 20
   Length: 222
@@ -324,7 +532,9 @@ MonoBehaviour:
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: 1139984533044242941}
+  - {fileID: -8135412632954852748}
   MinDistance: 1
   MaxDistance: 20
   Length: 52250
@@ -351,10 +561,36 @@ MonoBehaviour:
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: -3189410175414546558}
+  - {fileID: -1705057580090592350}
   MinDistance: 1
   MaxDistance: 20
   Length: 148
+--- !u!114 &-4916676162401200420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Anger Attack/Sound Effect Volume
+  m_EditorClassIdentifier: 
+  Name: Sound Effect Volume
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 10
+  ID:
+    data1: 1391531231
+    data2: 4005377249
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &-4878761255987376474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -382,6 +618,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 742
+--- !u!114 &-4805042111221323477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Player attack/Sound Effect Volume
+  m_EditorClassIdentifier: 
+  Name: Sound Effect Volume
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 10
+  ID:
+    data1: 1391531231
+    data2: 4005377249
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &-4590241497138777669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -405,7 +665,9 @@ MonoBehaviour:
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: 2516095379920082555}
+  - {fileID: 6074804922873785120}
   MinDistance: 1
   MaxDistance: 20
   Length: 465
@@ -432,7 +694,9 @@ MonoBehaviour:
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: 2023133049077622233}
+  - {fileID: -6862165168122132238}
   MinDistance: 1
   MaxDistance: 20
   Length: 2000
@@ -456,6 +720,30 @@ MonoBehaviour:
   ID:
     data1: 3321088605
     data2: 3768252165
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-4132915008220063378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Sad Impact/Sound Effect Volume
+  m_EditorClassIdentifier: 
+  Name: Sound Effect Volume
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 10
+  ID:
+    data1: 1391531231
+    data2: 4005377249
   Type: 0
   IsGlobal: 1
   Labels: []
@@ -487,6 +775,78 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1187
+--- !u!114 &-3720647944491422369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/back/Master Volume
+  m_EditorClassIdentifier: 
+  Name: Master Volume
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 10
+  ID:
+    data1: 1288323969
+    data2: 2105759058
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-3648805449575120721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music Parent/Music Volume
+  m_EditorClassIdentifier: 
+  Name: Music Volume
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 10
+  ID:
+    data1: 890575314
+    data2: 321853071
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-3554253017865262090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Dash/Sound Effect Volume
+  m_EditorClassIdentifier: 
+  Name: Sound Effect Volume
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 10
+  ID:
+    data1: 1391531231
+    data2: 4005377249
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &-3525978281665543132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -510,10 +870,36 @@ MonoBehaviour:
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: -8013657950798218267}
+  - {fileID: -4916676162401200420}
   MinDistance: 1
   MaxDistance: 20
   Length: 600
+--- !u!114 &-3189410175414546558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/forward/Sound Effect Volume
+  m_EditorClassIdentifier: 
+  Name: Sound Effect Volume
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 10
+  ID:
+    data1: 1391531231
+    data2: 4005377249
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &-3149546330997600134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -573,7 +959,9 @@ MonoBehaviour:
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: -1435252508681718355}
+  - {fileID: 3892138913514328161}
   MinDistance: 1
   MaxDistance: 20
   Length: 5000
@@ -604,6 +992,102 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1039
+--- !u!114 &-2063169085171192505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Jump 1/Sound Effect Volume
+  m_EditorClassIdentifier: 
+  Name: Sound Effect Volume
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 10
+  ID:
+    data1: 1391531231
+    data2: 4005377249
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-1705057580090592350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/forward/Master Volume
+  m_EditorClassIdentifier: 
+  Name: Master Volume
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 10
+  ID:
+    data1: 1288323969
+    data2: 2105759058
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-1435252508681718355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Anger Idle/Sound Effect Volume
+  m_EditorClassIdentifier: 
+  Name: Sound Effect Volume
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 10
+  ID:
+    data1: 1391531231
+    data2: 4005377249
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-1170770991830509982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Sad Attack/Sound Effect Volume
+  m_EditorClassIdentifier: 
+  Name: Sound Effect Volume
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 10
+  ID:
+    data1: 1391531231
+    data2: 4005377249
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &-922340310781362492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -627,7 +1111,9 @@ MonoBehaviour:
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: 905968327889672735}
+  - {fileID: 6828999665213793248}
   MinDistance: 1
   MaxDistance: 20
   Length: 2000
@@ -654,7 +1140,9 @@ MonoBehaviour:
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: 928425208651425198}
+  - {fileID: -6739571211119104909}
   MinDistance: 1
   MaxDistance: 20
   Length: 500
@@ -735,12 +1223,15 @@ MonoBehaviour:
   EditorParameters:
   - {fileID: -5809858994033788440}
   - {fileID: -4382099538846385009}
+  - {fileID: 6154053407271855862}
+  - {fileID: 1508094691350526558}
+  - {fileID: 4889318549828211810}
   MasterBanks:
   - {fileID: -8825886483869512796}
   StringsBanks:
   - {fileID: 8999953657572529065}
   cacheVersion: 131858
-  cacheTime: 639120465679707411
+  cacheTime: 639121313636577925
   SerializableEventsDict:
   - key: event:/Ambience/ambience anger
     index: 0
@@ -800,6 +1291,30 @@ MonoBehaviour:
     index: 27
   - key: event:/Music/Music Parent
     index: 28
+--- !u!114 &35037055703469286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Sad Idle/Sound Effect Volume
+  m_EditorClassIdentifier: 
+  Name: Sound Effect Volume
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 10
+  ID:
+    data1: 1391531231
+    data2: 4005377249
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &84325918349447617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -815,10 +1330,154 @@ MonoBehaviour:
   Path: FMODAssets/CIM316.2_Shared FMod_Howard_1030726_300326/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639120465679707411
+  lastModified: 639121268112101943
   FileSizes:
   - Name: Desktop
-    Value: 3659680
+    Value: 3671168
+  Exists: 1
+--- !u!114 &905968327889672735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/PlayerImpact/Sound Effect Volume
+  m_EditorClassIdentifier: 
+  Name: Sound Effect Volume
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 10
+  ID:
+    data1: 1391531231
+    data2: 4005377249
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &928425208651425198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ground slam/Sound Effect Volume
+  m_EditorClassIdentifier: 
+  Name: Sound Effect Volume
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 10
+  ID:
+    data1: 1391531231
+    data2: 4005377249
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &1139984533044242941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/ambience hub/Master Volume
+  m_EditorClassIdentifier: 
+  Name: Master Volume
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 10
+  ID:
+    data1: 1288323969
+    data2: 2105759058
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &1508094691350526558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Master Volume
+  m_EditorClassIdentifier: 
+  Name: Master Volume
+  StudioPath: parameter:/Master Volume
+  Min: 0
+  Max: 10
+  Default: 10
+  ID:
+    data1: 1288323969
+    data2: 2105759058
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &2023133049077622233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Anger Impact/Sound Effect Volume
+  m_EditorClassIdentifier: 
+  Name: Sound Effect Volume
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 10
+  ID:
+    data1: 1391531231
+    data2: 4005377249
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &2133181150197854414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Jump 1/Master Volume
+  m_EditorClassIdentifier: 
+  Name: Master Volume
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 10
+  ID:
+    data1: 1288323969
+    data2: 2105759058
+  Type: 0
+  IsGlobal: 1
+  Labels: []
   Exists: 1
 --- !u!114 &2432292288332997385
 MonoBehaviour:
@@ -835,10 +1494,82 @@ MonoBehaviour:
   Path: FMODAssets/CIM316.2_Shared FMod_Howard_1030726_300326/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 639120465679454875
+  lastModified: 639121313636577925
   FileSizes:
   - Name: Desktop
-    Value: 4853824
+    Value: 4857408
+  Exists: 1
+--- !u!114 &2516095379920082555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/confirm/Sound Effect Volume
+  m_EditorClassIdentifier: 
+  Name: Sound Effect Volume
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 10
+  ID:
+    data1: 1391531231
+    data2: 4005377249
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &2768958225772462490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/ambience Sadness/Master Volume
+  m_EditorClassIdentifier: 
+  Name: Master Volume
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 10
+  ID:
+    data1: 1288323969
+    data2: 2105759058
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &3063027773435310171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/Sound Effect Volume
+  m_EditorClassIdentifier: 
+  Name: Sound Effect Volume
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 10
+  ID:
+    data1: 1391531231
+    data2: 4005377249
+  Type: 0
+  IsGlobal: 1
+  Labels: []
   Exists: 1
 --- !u!114 &3358152127574715949
 MonoBehaviour:
@@ -867,6 +1598,78 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2000
+--- !u!114 &3639554122100879576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Sad Attack/Master Volume
+  m_EditorClassIdentifier: 
+  Name: Master Volume
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 10
+  ID:
+    data1: 1288323969
+    data2: 2105759058
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &3892138913514328161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Anger Idle/Master Volume
+  m_EditorClassIdentifier: 
+  Name: Master Volume
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 10
+  ID:
+    data1: 1288323969
+    data2: 2105759058
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &4069884558991329726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Player attack/Master Volume
+  m_EditorClassIdentifier: 
+  Name: Master Volume
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 10
+  ID:
+    data1: 1288323969
+    data2: 2105759058
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &4364227577566358772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -890,10 +1693,36 @@ MonoBehaviour:
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: 6219915351795601469}
+  - {fileID: -3554253017865262090}
   MinDistance: 1
   MaxDistance: 20
   Length: 13000
+--- !u!114 &4889318549828211810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Sound Effect Volume
+  m_EditorClassIdentifier: 
+  Name: Sound Effect Volume
+  StudioPath: parameter:/Sound Effect Volume
+  Min: 0
+  Max: 10
+  Default: 10
+  ID:
+    data1: 1391531231
+    data2: 4005377249
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &5007749217787079882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -921,6 +1750,78 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 593
+--- !u!114 &5239629319971587035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/ambience anger/Master Volume
+  m_EditorClassIdentifier: 
+  Name: Master Volume
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 10
+  ID:
+    data1: 1288323969
+    data2: 2105759058
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &5407327621560277101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Open Menu/Master Volume
+  m_EditorClassIdentifier: 
+  Name: Master Volume
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 10
+  ID:
+    data1: 1288323969
+    data2: 2105759058
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &5645752450746407859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/close - back menu/Master Volume
+  m_EditorClassIdentifier: 
+  Name: Master Volume
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 10
+  ID:
+    data1: 1288323969
+    data2: 2105759058
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &5900597703026571759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -944,10 +1845,132 @@ MonoBehaviour:
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: -8945197657147621801}
+  - {fileID: 3063027773435310171}
   MinDistance: 1
   MaxDistance: 20
   Length: 4000
+--- !u!114 &6050128331172736090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/ambience Sadness/Music Volume
+  m_EditorClassIdentifier: 
+  Name: Music Volume
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 10
+  ID:
+    data1: 890575314
+    data2: 321853071
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &6074804922873785120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/confirm/Master Volume
+  m_EditorClassIdentifier: 
+  Name: Master Volume
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 10
+  ID:
+    data1: 1288323969
+    data2: 2105759058
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &6154053407271855862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music Volume
+  m_EditorClassIdentifier: 
+  Name: Music Volume
+  StudioPath: parameter:/Music Volume
+  Min: 0
+  Max: 10
+  Default: 10
+  ID:
+    data1: 890575314
+    data2: 321853071
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &6219915351795601469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Dash/Master Volume
+  m_EditorClassIdentifier: 
+  Name: Master Volume
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 10
+  ID:
+    data1: 1288323969
+    data2: 2105759058
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &6828999665213793248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/PlayerImpact/Master Volume
+  m_EditorClassIdentifier: 
+  Name: Master Volume
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 10
+  ID:
+    data1: 1288323969
+    data2: 2105759058
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &7299074084636901094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -971,7 +1994,9 @@ MonoBehaviour:
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: 4069884558991329726}
+  - {fileID: -4805042111221323477}
   MinDistance: 1
   MaxDistance: 20
   Length: 3000
@@ -1022,10 +2047,60 @@ MonoBehaviour:
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: -7494494112714358805}
+  - {fileID: 35037055703469286}
   MinDistance: 1
   MaxDistance: 20
   Length: 1700
+--- !u!114 &7851892661342636593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/ambience anger/Music Volume
+  m_EditorClassIdentifier: 
+  Name: Music Volume
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 10
+  ID:
+    data1: 890575314
+    data2: 321853071
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &8300516318799647867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/close - back menu/Sound Effect Volume
+  m_EditorClassIdentifier: 
+  Name: Sound Effect Volume
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 10
+  ID:
+    data1: 1391531231
+    data2: 4005377249
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &8653472027318248393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1053,6 +2128,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 890
+--- !u!114 &8658174991685318340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music Parent/Master Volume
+  m_EditorClassIdentifier: 
+  Name: Master Volume
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 10
+  ID:
+    data1: 1288323969
+    data2: 2105759058
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &8761873653249171943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1076,10 +2175,36 @@ MonoBehaviour:
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: 5407327621560277101}
+  - {fileID: -9103803346771735096}
   MinDistance: 1
   MaxDistance: 20
   Length: 185
+--- !u!114 &8953522625154010283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/back/Sound Effect Volume
+  m_EditorClassIdentifier: 
+  Name: Sound Effect Volume
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 10
+  ID:
+    data1: 1391531231
+    data2: 4005377249
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &8999953657572529065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1095,8 +2220,8 @@ MonoBehaviour:
   Path: FMODAssets/CIM316.2_Shared FMod_Howard_1030726_300326/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639120465679139832
+  lastModified: 639121268110257953
   FileSizes:
   - Name: Desktop
-    Value: 2596
+    Value: 2740
   Exists: 1

@@ -53,7 +53,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1;
         uiSFXManager.PlayConfirm();
         musicManager.MusAliveFO();
-        musicManager.StopMusEmitter();
+        musicManager.SilenceMusEmitter();
         SceneManager.LoadScene("MainMenu");
     }
 
@@ -62,7 +62,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1;
         uiSFXManager.PlayConfirm();
         musicManager.MusAliveFO();
-        musicManager.StopMusEmitter();
+        musicManager.SilenceMusEmitter();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

@@ -240,6 +240,9 @@
 		<relationship name="destination">
 			<destination>{5f47a843-6d6c-4b16-95d3-8ac22e0b6c2f}</destination>
 		</relationship>
+		<relationship name="triggerConditions">
+			<destination>{6c0855da-7c9b-48b0-9ebf-4c475e514090}</destination>
+		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{bad9e8f7-a2a8-4d3c-a3b3-2e71090302fa}">
 		<relationship name="effects">
@@ -314,6 +317,11 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{a1d31159-c911-4c7c-9af0-5af5d0b85c33}" />
+	<object class="EventCondition" id="{6c0855da-7c9b-48b0-9ebf-4c475e514090}">
+		<property name="eventState">
+			<value>1</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{cf0da506-d9da-4f77-a325-f1edbecee7d4}" />
 	<object class="MixerBusFader" id="{f705ab6d-507c-40dc-ba7f-7cc943479c75}" />
 </objects>

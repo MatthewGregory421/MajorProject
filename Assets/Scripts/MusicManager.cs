@@ -21,7 +21,7 @@ public class MusicManager : MonoBehaviour
           Mus.Play();
     }
 
-        public void StopMusEmitter()
+        public void SilenceMusEmitter()
     {
         RuntimeManager.StudioSystem.setParameterByName(musicSelect, 0);
         //Mus.Stop();

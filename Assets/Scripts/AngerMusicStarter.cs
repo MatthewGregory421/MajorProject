@@ -9,6 +9,5 @@ public class AngerMusicStarter : MonoBehaviour
     private void Start()
     {
         musicManager.MusAOAPlay();
-        musicManager.PlayMusEmitter();
     }
 }
