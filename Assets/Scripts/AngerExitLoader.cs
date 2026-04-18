@@ -23,7 +23,6 @@ public class AngerExitLoader : MonoBehaviour
     {
         Time.timeScale = 1f;
         musicManager.MusAliveFO();
-        musicManager.StopMusEmitter();
         SceneManager.LoadScene("MainMenu");
     }
 }

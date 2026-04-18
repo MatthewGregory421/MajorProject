@@ -7,6 +7,7 @@ public class PlayerAnims : MonoBehaviour
     [SerializeField] Rigidbody2D rb;
     [SerializeField] Animator animator;
     [SerializeField] int lookdirection = 1;
+    [SerializeField] float recoverspeed = 10f;
 
     [SerializeField] Transform body;
 
@@ -46,7 +47,7 @@ public class PlayerAnims : MonoBehaviour
         grounded = pMovement.isGrounded;
         groundslam = pMovement.isGroundSlamming;
 
-
+        gameObject.transform.localScale = Vector3.Lerp(gameObject.transform.localScale, new Vector3(lookdirection, 1, 1), Time.deltaTime * recoverspeed);
 
         yVelocity = rb.linearVelocityY;
         xVelocity = Mathf.Abs(rb.linearVelocityX);
@@ -55,7 +56,8 @@ public class PlayerAnims : MonoBehaviour
         if (pMovement.lookHorizontal != lookdirection && pMovement.lookHorizontal != 0)
         {
             lookdirection = pMovement.lookHorizontal;
-            body.localScale =new Vector3(lookdirection, 1, 1);
+            
+            
         }
 
        

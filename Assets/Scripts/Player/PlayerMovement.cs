@@ -1,5 +1,6 @@
 using UnityEngine;
 using FMODUnity;
+using UnityEngine.Events;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -25,6 +26,8 @@ public class PlayerMovement : MonoBehaviour
     public bool doubleJumpEnabled = true; // toggle in inspector
     private bool canDoubleJump;
     public bool canJump = true;
+    public UnityEvent jumpEvent;
+    public UnityEvent doubleJumpEvent;
 
     [Header("Ground Check")]
     public Transform groundCheck;
@@ -57,6 +60,7 @@ public class PlayerMovement : MonoBehaviour
     [Tooltip("How long the player remains in the dash state.")]
     public float dashDuration;
     public float dashCooldown = 0.8f;
+    public UnityEvent dashEvent;
 
     private bool isDashing;
     private float dashTimer;
@@ -232,12 +236,14 @@ public class PlayerMovement : MonoBehaviour
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
                 canDoubleJump = true;
                 sfxManager.PlayPlayerJumpEmitter();
+                jumpEvent.Invoke();
             }
             else if (doubleJumpEnabled && canDoubleJump)
             {
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
                 canDoubleJump = false;
                 sfxManager.PlayPlayerJumpEmitter();
+                doubleJumpEvent.Invoke();
             }
         }
     }
@@ -361,6 +367,7 @@ public class PlayerMovement : MonoBehaviour
         dashDirection = lookHorizontal;
 
         rb.gravityScale = 0f; // optional freeze gravity
+        dashEvent.Invoke();
         sfxManager.PlayPlayerDashEmitter();
     }
 
@@ -370,5 +377,17 @@ public class PlayerMovement : MonoBehaviour
         isInvulnerable = false;
 
         rb.gravityScale = 2f; // set back to normal gravity
+    }
+
+    public bool CheckDashCoolDown()
+    {
+        if(dashCooldownTimer <= 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }

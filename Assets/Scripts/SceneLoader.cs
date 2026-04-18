@@ -7,28 +7,28 @@ public class SceneLoader : MonoBehaviour
     public UISFXManager uiSFXManager;
     public void LoadScene()
     {
-        musicManager.StopMusEmitter();
+        musicManager.SilenceMusEmitter();
         SceneManager.LoadScene("TestScene");
     }
     // From Here is set up for later use once I fully flesh out the level design
     public void GoToHubProto()
     {
         musicManager.MusAliveFO();
-        musicManager.MusHOHPlay();
+        musicManager.SilenceMusEmitter();
         SceneManager.LoadScene("Hub Proto");
     }
 
     public void GoToAngerProto()
     {
         musicManager.MusAliveFO();
-        musicManager.MusAOAPlay();
+        musicManager.SilenceMusEmitter();
         SceneManager.LoadScene("Anger Proto");
     }
 
     public void GoToSadnessProto()
     {
         musicManager.MusAliveFO();
-        musicManager.MusSOSPlay();
+        musicManager.SilenceMusEmitter();
         SceneManager.LoadScene("Sadness Proto");
     }
 }
