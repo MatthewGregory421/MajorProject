@@ -1428,6 +1428,7 @@ MonoBehaviour:
   musicManager: {fileID: 858710095}
   menuPanel: {fileID: 1320043145}
   optionsPanel: {fileID: 524552754}
+  uiSFXManager: {fileID: 1832115391}
 --- !u!1 &858710087
 GameObject:
   m_ObjectHideFlags: 0
@@ -1443,6 +1444,7 @@ GameObject:
   - component: {fileID: 858710095}
   - component: {fileID: 858710096}
   - component: {fileID: 858710097}
+  - component: {fileID: 858710098}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1613,6 +1615,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nonRigidbodyVelocity: 0
   attenuationObject: {fileID: 0}
+--- !u!114 &858710098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 858710087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9468c5f457ace64f8d4df6d642b107f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LoadEvent: 1
+  UnloadEvent: 2
+  Banks:
+  - SFX
+  CollisionTag: 
+  PreloadSamples: 1
 --- !u!1 &893282125
 GameObject:
   m_ObjectHideFlags: 0
@@ -3378,6 +3398,9 @@ GameObject:
   - component: {fileID: 1832115386}
   - component: {fileID: 1832115390}
   - component: {fileID: 1832115389}
+  - component: {fileID: 1832115392}
+  - component: {fileID: 1832115393}
+  - component: {fileID: 1832115391}
   m_Layer: 0
   m_Name: BGM Manager
   m_TagString: BGM
@@ -3461,6 +3484,85 @@ MonoBehaviour:
   - Music
   CollisionTag: 
   PreloadSamples: 1
+--- !u!114 &1832115391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1832115385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b596fc372748de40842cbe3023d9ae0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Open: {fileID: 0}
+  Close: {fileID: 0}
+  Confirm: {fileID: 1832115393}
+  Forward: {fileID: 0}
+  Back: {fileID: 1832115392}
+--- !u!114 &1832115392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1832115385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1536865016
+      Data2: 1154563791
+      Data3: -1005095773
+      Data4: 126018416
+    Path: event:/UI/back
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &1832115393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1832115385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -33688010
+      Data2: 1212876308
+      Data3: 1005168258
+      Data4: 1308708024
+    Path: event:/UI/confirm
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1886132453
 GameObject:
   m_ObjectHideFlags: 0

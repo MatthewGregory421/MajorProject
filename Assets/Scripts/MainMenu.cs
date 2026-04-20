@@ -15,6 +15,8 @@ public class MainMenu : MonoBehaviour
     public GameObject optionsPanel;
    // private VCA masterVCA;
 
+   public UISFXManager uiSFXManager;
+
     void Start()
     {
         menuPanel.SetActive(true);
@@ -24,6 +26,7 @@ public class MainMenu : MonoBehaviour
     public void StartGame()
     {
         // hopefully this doesn't break shit
+        uiSFXManager.PlayConfirm();
         musicManager.MusAliveFO();
         musicManager.MusHOHPlay();
         SceneManager.LoadScene("Hub Proto");
@@ -31,18 +34,21 @@ public class MainMenu : MonoBehaviour
 
     public void Options()
     {
+        uiSFXManager.PlayConfirm();
         menuPanel.SetActive(false);
         optionsPanel.SetActive(true);
     }
 
     public void BackButton()
     {
+        uiSFXManager.PlayBack();
         optionsPanel.SetActive(false);
         menuPanel.SetActive(true);
     }
 
     public void QuitGame()
     {
+        uiSFXManager.PlayConfirm();
         Application.Quit();
     }
 }
